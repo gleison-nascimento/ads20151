@@ -14,11 +14,12 @@
             <label for="nome">Nome: </label><br>
             <input type="text" name="nome" id="nome" size="50" required><br> <%-- value="<%= p.getNome() %>" --%>
 
-            <label for="Perfil">Perfil do Solicitante:</label>
+            <label for="Perfil">Perfil do Solicitante:</label><br>
             <select name="Perfil" id="Perfil" required>
                 <option value="Aluno">Aluno</option>
                 <option value="Servidor">Servidor</option>
-                <option value="Pais ou comunidade externa">Pais ou comunidade externa</option>
+                <option value="Pais">Pais</option>
+                <option value="Comunidade externa">Comunidade externa</option>
             </select><br>
             
             <label for="mail">E-Mail: </label><br>
@@ -28,7 +29,7 @@
             <input type="text" name="telefone" id="telefone" size="50" ><br> <%-- value="<%= p.getNome() %>" --%>
             
             <label for="descr">Descrição da solicitação: </label><br>
-            <textarea name="descricao" id="descricao" rows="5" cols="40" required></textarea>
+            <textarea name="descricao" id="descricao" rows="5" cols="40" required></textarea><br>
 
             <label for="docs">Documentos em anexo: </label><br>
             <input type="text" name="documentos" id="documentos" size="80" ><br> <%-- value="<%= p.getNome() %>" --%>           
