@@ -1,7 +1,7 @@
 <%-- 
-    Document   : formTeste
-    Created on : 15/06/2016, 10:08:07
-    Author     : 10070185
+    Document   : Recepcao_AbreChamado
+    Created on : 15/06/2016, 11:26:54
+    Author     : Rodrigo
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -9,9 +9,8 @@
 <%@include file="cabecalho.html"%> 
 
 <div id="conteudo">
-    
-    INSIRA SEU FORMULÁRIO AQUI
-    
+     
+<%@include file="/Recepcao/AbreChamado.jsp"%> 
     
 </div>
 
