@@ -1,9 +1,12 @@
-body{
+body
+{
     background-image:url(imagens/backgraund.jpg);
     background-attachment: fixed;
     background-size: contain;
 }
-#Banner{
+
+#Banner
+{
     top:2%;
     left:20%;
     width: 960px;
@@ -14,7 +17,9 @@ body{
     color:#fff;
     font-size: 20px;
 }
- #titulo{
+ 
+#titulo
+ {
     position: absolute;
     background-color: #fff;
     opacity: 0.5;
@@ -26,14 +31,17 @@ body{
     padding-right: 5%;
     margin-left: 2%;
     margin-right: 2%; 
-    }	
-    #logo{
-        position: absolute;
-        left:3%;
-        top:3%;
-    } 
+}	
 
-#menu{
+#logo
+{
+    position: absolute;
+    left:3%;
+    top:3%;
+} 
+
+#menu
+{
   background-color:#333333;
    top:200px;
    left:20%;
@@ -42,15 +50,18 @@ body{
    position: absolute;
    border-radius: 8px;
 }
-ul{    
+
+ul
+{    
    font-family: Narkisim,sans-serif;
    font-size: 20px; 
    list-style: nome;    
-    margin-right: 2%;
-    padding:0%; 
-   
+   margin-right: 2%;
+   padding:0%; 
 }
-#menu li{
+
+#menu li
+{
     border-width: medium;  
     float: left;    
     display: block;
@@ -63,25 +74,13 @@ ul{
     opacity: 0.9; 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    
-    
-    
-/*      -webkit-transition: all .9s ease;
-    -moz-transition: all .9s ease;
-    -ms-transform: all .9s ease;
-    transition: all .9s ease;*/
 }
-
-
-
 
 li ul
 {
     display: none;
-    
-   
 }
-/*chave*/
+
 ul li a 
 {
     display: block;
@@ -113,32 +112,24 @@ li:hover li
 }
 
 li:hover a 
-
-{   font-size: 17px;
-/*    background-color:#006633;*/
-   
+{   
+    font-size: 17px;
 }
+
 li:hover li a:hover 
 {
     background:#009933;
 }
 
-/*#menu li:hoveranimação do menu {
-    background-color:#0ea024;
-    border-radius: 10px;
-    width:auto;
-   // position: absolute;
-}*/
-
-#usu{ position: absolute;
-      left:65%;
-      top:15%;
-    
+#usu
+{ 
+    position: absolute;
+    left:65%;
+    top:15%;   
 }
 
-
-#conteudo{
- 
+#conteudo
+{ 
    top:287px;
    left:20%;
    width: 960px;
@@ -147,8 +138,10 @@ li:hover li a:hover
    border-radius: 8px;
    opacity: 0.8;
    background-color:#666666;  
-  }   
-  #rodape{
+}   
+
+#rodape
+{
     top:124%;
     left:20%;
     width: 960px;
@@ -157,21 +150,19 @@ li:hover li a:hover
     border-radius: 10px;
     background-image:url(imagens/rodape.png);
     color:#fff;
-    font-size: 14px;
-  
-    
+    font-size: 14px;    
 }
-#inf{
+
+#inf
+{
     position: absolute;
     top:5%;
     height:auto;
     left: 30%;
     text-align: center;
-    
 }
 
-
-
-h1{
+h1
+{
     color:#1a3400;   
 }
