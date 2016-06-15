@@ -21,8 +21,7 @@
                 <input type="text" name="abertura" id="abertura" size="20" required><br> <%-- value="<%= p.getNome() %>" --%>
                 
                 <label for="fecha">Data de encerramento: </label><br>
-                <input type="text" name="fecha" id="fecha" size="20" required><br> <%-- value="<%= p.getNome() %>" --%>
-                
+                <input type="text" name="fecha" id="fecha" size="20" required><br> <%-- value="<%= p.getNome() %>" --%>                
                 
                 <label for="situacao">Situacao: </label><br>
                 <select name="situacao" id="situacao" required>
@@ -35,9 +34,11 @@
                 <input type="text" name="responsavel" id="responsavel" size="50" required><br> <%-- value="<%= p.getNome() %>" --%>
                 
                 <input type="submit" value="Enviar">
-                <input type="reset" value="Limpar">         
+                <input type="reset" value="Limpar">        
                 
             </form>
         </div>
+                
+                
     </body>
 </html>
