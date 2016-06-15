@@ -23,7 +23,7 @@
             }
         %>    
   <!-- onsubmit="return validarPerfil();" -->      
-        <form action="PerfilControl" >
+        <form action="/Gabinete/PerfilControl" >
             <input type="hidden" name="op" value="<%= (p.getId() == 0 ? "INSERIR":"ATUALIZAR") %>">
             <input type="hidden" name="id" value="<%= p.getId() %>">
             
