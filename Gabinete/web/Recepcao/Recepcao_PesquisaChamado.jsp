@@ -13,7 +13,7 @@
     </head>
     <body>
         <div>
-            <form action="">
+            <form action="PesquisaChamado">
                 <label for="solicitante">Solicitante: </label><br>
                 <input type="text" name="solicitante" id="solicitante" size="50" required><br> <%-- value="<%= p.getNome() %>" --%>
                 
