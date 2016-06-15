@@ -4,9 +4,17 @@
         <servlet-name>PerfilControl</servlet-name>
         <servlet-class>br.edu.ifrs.controle.PerfilControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UsuarioControl</servlet-name>
+        <servlet-class>br.edu.ifrs.controle.UsuarioControl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>PerfilControl</servlet-name>
         <url-pattern>/PerfilControl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsuarioControl</servlet-name>
+        <url-pattern>/UsuarioControl</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
