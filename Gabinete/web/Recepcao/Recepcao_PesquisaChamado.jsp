@@ -18,7 +18,7 @@
                 <input type="text" name="solicitante" id="solicitante" size="50" required><br> <%-- value="<%= p.getNome() %>" --%>
                 
                 <label for="abertura">Data de abertura: </label><br>
-                <input type="text" name="abertura" id="abertura" size="20" required><br> <%-- value="<%= p.getNome() %>" --%>
+                <input type="text" name="abertura" id="abertura"  size="20" required><br> <%-- value="<%= p.getNome() %>" --%>
                 
                 <label for="fecha">Data de encerramento: </label><br>
                 <input type="text" name="fecha" id="fecha" size="20" required><br> <%-- value="<%= p.getNome() %>" --%>                
