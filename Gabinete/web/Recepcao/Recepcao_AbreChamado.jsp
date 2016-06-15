@@ -23,16 +23,16 @@
             </select><br>
             
             <label for="mail">E-Mail: </label><br>
-            <input type="text" name="email" id="email" size="80" required><br> <%-- value="<%= p.getNome() %>" --%>
+            <input type="text" name="email" id="email" size="50" required><br> <%-- value="<%= p.getNome() %>" --%>
 
             <label for="fone">Telefone: </label><br>
             <input type="text" name="telefone" id="telefone" size="50" ><br> <%-- value="<%= p.getNome() %>" --%>
             
             <label for="descr">Descrição da solicitação: </label><br>
-            <textarea name="descricao" id="descricao" rows="5" cols="40" required></textarea><br>
+            <textarea name="descricao" id="descricao" rows="5" cols="51" required></textarea><br>
 
             <label for="docs">Documentos em anexo: </label><br>
-            <input type="text" name="documentos" id="documentos" size="80" ><br> <%-- value="<%= p.getNome() %>" --%>           
+            <input type="text" name="documentos" id="documentos" size="50" ><br> <%-- value="<%= p.getNome() %>" --%>           
 
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
