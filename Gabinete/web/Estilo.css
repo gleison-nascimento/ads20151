@@ -27,15 +27,15 @@ body{
     margin-left: 2%;
     margin-right: 2%; 
     }	
-#logo
-{
-    position: absolute;
-    left:3%;
-    top:3%;
-} 
+    #logo{
+        position: absolute;
+        left:3%;
+        top:3%;
+       // background-color: white;
+    } 
 
 #menu{
-   background-color:#333333;
+  background-color:#333333;
    top:200px;
    left:20%;
    width: 960px;
@@ -64,6 +64,13 @@ ul{
     opacity: 0.9; 
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    
+    
+    
+/*      -webkit-transition: all .9s ease;
+    -moz-transition: all .9s ease;
+    -ms-transform: all .9s ease;
+    transition: all .9s ease;*/
 }
 
 
@@ -117,6 +124,19 @@ li:hover li a:hover
     background:#009933;
 }
 
+/*#menu li:hoveranimação do menu {
+    background-color:#0ea024;
+    border-radius: 10px;
+    width:auto;
+   // position: absolute;
+}*/
+
+#usu{ position: absolute;
+      left:65%;
+      top:15%;
+    
+}
+
 
 #conteudo{
  
@@ -153,7 +173,6 @@ li:hover li a:hover
 
 
 
-h1
-{
+h1{
     color:#1a3400;   
 }
