@@ -16,7 +16,7 @@
         <h1>Lista de Perfis</h1>
         <hr>
         
-        <form action="PerfilControl">
+        <form action="/Gabinete/PerfilControl">
             <input type="hidden" name="op" value="CONSULTA">
             
             <label for="nome">Nome: </label>
@@ -26,7 +26,7 @@
         </form>
         
         <hr>
-        <a href="formPerfil.jsp">Adicionar</a>
+        <a href="cadastros/formPerfil.jsp">Adicionar</a>
         <table border="1" cellpadding="1" cellspacing="0">
             <tr>
                 <th>ID</th>

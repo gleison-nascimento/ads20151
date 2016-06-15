@@ -89,7 +89,7 @@ public class UsuarioControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                request.getRequestDispatcher("erro.jsp");
+                request.getRequestDispatcher("cadastros/erro.jsp");
             dispatcher.forward(request, response);
         }
         

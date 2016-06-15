@@ -46,7 +46,7 @@ public class PerfilControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("erro.jsp");
+                    request.getRequestDispatcher("cadastros/erro.jsp");
             dispatcher.forward(request, response);
         }
         
@@ -71,7 +71,7 @@ public class PerfilControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("erro.jsp");
+                    request.getRequestDispatcher("cadastros/erro.jsp");
             dispatcher.forward(request, response);
         }
         
@@ -97,7 +97,7 @@ public class PerfilControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("erro.jsp");
+                    request.getRequestDispatcher("cadastros/erro.jsp");
             dispatcher.forward(request, response);
         }
         
@@ -110,12 +110,12 @@ public class PerfilControl extends HttpServlet {
             if (op.equals("CONSULTA")) {
                 Perfil[] perfis = null;
                 perfis = PerfilDAO.consultar(request.getParameter("nome"));
-                pagina = "consultaPerfil.jsp";
+                pagina = "cadastros/consultaPerfil.jsp";
                 request.setAttribute("perfis", perfis);
             } else { 
                 Perfil perfil = null;
                 perfil = PerfilDAO.consultar(Integer.parseInt(request.getParameter("id")));
-                pagina = "formPerfil.jsp";
+                pagina = "cadastros/formPerfil.jsp";
                 request.getSession().setAttribute("perfil", perfil);
                 //request.setAttribute("perfil", perfil);
             }
@@ -127,7 +127,7 @@ public class PerfilControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("erro.jsp");
+                    request.getRequestDispatcher("cadastros/erro.jsp");
             dispatcher.forward(request, response);
         }
         
@@ -150,7 +150,7 @@ public class PerfilControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("erro.jsp");
+                    request.getRequestDispatcher("cadastros/erro.jsp");
             dispatcher.forward(request, response);
         }
         

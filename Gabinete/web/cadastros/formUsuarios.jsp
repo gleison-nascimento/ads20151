@@ -15,7 +15,7 @@
     <body>
         <h1>Cadastro de Usuários</h1>
         <hr>
-        <form action="UsuarioControl" method="post" onsubmit="return validarUsuario();">
+        <form action="/Gabinete/UsuarioControl" method="post" onsubmit="return validarUsuario();">
             <label for="cpf">CPF: </label><br>
             <input type="text" name="cpf" id="cpf" size="20" required><br>
             

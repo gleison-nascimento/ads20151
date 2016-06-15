@@ -236,42 +236,4 @@ public class Usuario {
     public void setObservacoes(String observacoes) {
         this.observacoes = observacoes;
     }
-    
-    public void adicionar() throws Exception {
-        Connection con = null;
-        PreparedStatement pstmt = null;
-        
-        try {
-            try {
-                /* Conectar no banco de dados */
-                Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gabinete", "root", "connect");
-
-                /* Preprar a sentença SQL */
-                pstmt = con.prepareStatement("insert into usuarios (cpf, siape, nome, sexo, endereco, email, telefone, username, senha, situacao, observacoes, id_perfil) values (?, ?, ?, ?, ?, ?, ?, ?, MD5(?), ?, ?, ?)");
-                pstmt.setString(1, this.cpf);
-                pstmt.setString(2, this.matricula);
-                pstmt.setString(3, this.nome);
-                pstmt.setString(4, this.sexo);
-                pstmt.setString(5, this.endereco);
-                pstmt.setString(6, this.email);
-                pstmt.setString(7, this.telefoneResidencial);
-                pstmt.setString(8, this.username);
-                pstmt.setString(9, this.senha);
-                pstmt.setString(10, this.situacao);
-                pstmt.setString(11, this.observacoes);
-                pstmt.setInt(12, this.perfil.getId());
-
-                /* Executar a sentença no banco de dados */
-                pstmt.execute();
-            } catch (Exception e) {
-                throw new Exception("Falha ao inserir o usuário no Banco de Dados.<br><!--" + e.getMessage() + "-->");
-            } finally {
-                pstmt.close();
-                con.close();
-            }
-        } catch (Exception ex) {
-            throw ex;
-        }
-    }
 }
