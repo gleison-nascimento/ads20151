@@ -35,9 +35,7 @@
                 <input type="text" name="responsavel" id="responsavel" size="50" required><br> <%-- value="<%= p.getNome() %>" --%>
                 
                 <input type="submit" value="Enviar">
-                <input type="reset" value="Limpar">
-                
-                
+                <input type="reset" value="Limpar">         
                 
             </form>
         </div>
