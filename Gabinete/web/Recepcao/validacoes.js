@@ -8,14 +8,16 @@ function ValidaCampoVazio()
     var perfil = document.getElementById("Perfil");
     var email = document.getElementById("email");
     var descricao = document.getElementById("descricao");
+    var dataIni = document.getElementById("inicio");
+    var dataFim = document.getElementById("fim");
+    var situacao = document.getElementById("situacao");  
     
     if (nome.value==='')
     {
         alert('O nome deve ser digitado!');
         nome.focus();
         return false;        
-    }    
-    
+    }      
     
     if (perfil.value==='')
     {
@@ -35,6 +37,27 @@ function ValidaCampoVazio()
     {
         alert('A descricao deve ser digitado!');
         descricao.focus();
+        return false;        
+    } 
+    
+    if (dataIni.value ===''){
+        
+        alert('A data de inicio deve ser digitada!');
+        dataIni.focus();
+        return false;        
+    }
+    
+    if (dataFim.value ===''){
+        
+        alert('A data final deve ser digitada!');
+        dataFim.focus();
+        return false;        
+    }
+    
+    if (situacao.value==='')
+    {
+        alert('A situação deve ser selecionada!');
+        situacao.focus();
         return false;        
     }    
 }
