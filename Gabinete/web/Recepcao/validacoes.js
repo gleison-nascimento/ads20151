@@ -11,6 +11,7 @@ function ValidaCampoVazio()
     var dataIni = document.getElementById("inicio");
     var dataFim = document.getElementById("fim");
     var situacao = document.getElementById("situacao");  
+    var servidores = document.getElementById("servodores");  
     
     if (nome.value==='')
     {
@@ -58,6 +59,13 @@ function ValidaCampoVazio()
     {
         alert('A situação deve ser selecionada!');
         situacao.focus();
+        return false;        
+    }    
+    
+     if (servidores.value==='')
+    {
+        alert('Um servidor deve ser selecionado!');
+        servidores.focus();
         return false;        
     }    
 }
