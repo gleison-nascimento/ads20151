@@ -16,6 +16,12 @@
                  <input type="text" name="telefone" id="telefone" size="50" ><br> <%-- value="<%= p.getNome() %>" --%>
                  <label for="descr">Descrição da Resposta: </label><br>
                  <textarea name="descricao" id="descricao" rows="5" cols="51" required></textarea><br>
+                 <label for="inicio">Data da Resposta: </label><br>
+                 <input type="text" name="data" id="data"  size="20" required><br> <%-- value="<%= p.getNome() %>" --%>
+                 <label for="docs">Documentos em anexo: </label><br>
+                 <input type="text" name="documentos" id="documentos" size="50" ><br> <%-- value="<%= p.getNome() %>" --%>           
+                 <input type="submit" value="Enviar">
+                 <input type="reset" value="Limpar">
              </form>
         </div>
     </body>
