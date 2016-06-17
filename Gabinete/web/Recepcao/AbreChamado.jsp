@@ -5,7 +5,8 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<%@include file="/cabecalho.html"%> 
+
+<%@include file="../cabecalho.html"%> 
 
 <div>
     <form action="CadastraChamado">
@@ -37,4 +38,3 @@
 
     </form> 
 </div>
-<%@include file="/rodape.html"%>

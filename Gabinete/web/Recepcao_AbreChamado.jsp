@@ -9,7 +9,7 @@
 <%@include file="cabecalho.html"%> 
 
 <div id="conteudo">
-     
+<br><br><br>     
 <%@include file="/Recepcao/AbreChamado.jsp"%> 
     
 </div>
