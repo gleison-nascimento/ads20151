@@ -42,7 +42,7 @@ body
 
 #menu
 {
-  background-color:#333333;
+   background-color:#333333;
    top:200px;
    left:20%;
    width: 960px;
@@ -65,7 +65,7 @@ ul
     border-width: medium;  
     float: left;    
     display: block;
-    margin:0px 0px 0px 50px; 
+    margin:0px 0px 0px 40px; 
     color:white; 
     padding: 20px;
     text-align: center;
@@ -133,7 +133,7 @@ li:hover li a:hover
    top:287px;
    left:20%;
    width: 960px;
-   height: 700px;
+   height: 590px;
    position: absolute;
    border-radius: 8px;
    opacity: 0.8;

@@ -4,13 +4,13 @@
     Author     : 10070185
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <%@include file="cabecalho.html"%> 
 
 <div id="conteudo">
     
-    INSIRA SEU FORMULÃRIO AQUI
+    INSIRA SEU FORMULÁRIO AQUI
     
     
 </div>

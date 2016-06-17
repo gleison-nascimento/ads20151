@@ -3,11 +3,10 @@
     Created on : 10/06/2016, 09:04:14
     Author     : Rodrigo
 --%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <!DOCTYPE html>
 
 <%@include file="../cabecalho.html"%> 
-<%@include file="../menu.html"%>
 
 <div id="conteudo">
     <div id="DivAbreChamado">
@@ -31,7 +30,7 @@
             <label for="fone">Telefone: </label><br>
             <input type="text" name="telefone" id="telefone" size="50" ><br> <%-- value="<%= p.getNome() %>" --%>
 
-            <label for="descr">DescriÃ§Ã£o da solicitaÃ§Ã£o: </label><br>
+            <label for="descr">Descrição da solicitação: </label><br>
             <textarea name="descricao" id="descricao" rows="5" cols="51" required></textarea><br>
 
             <label for="docs">Documentos em anexo: </label><br>
@@ -43,5 +42,6 @@
         </form> 
     </div>
 </div>
-        
+
+<%@include file="../menu.html"%>
 <%@include file="../rodape.html"%>        
