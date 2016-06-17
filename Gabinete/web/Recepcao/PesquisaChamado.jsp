@@ -63,6 +63,10 @@
                         <td>
                             <a href="EncaminhaChamado.jsp">Encaminhar</a>;                            
                         </td>
+                        <td>
+                            <a href="RespondeChamado.jsp">Responder</a>;                            
+                        </td>
+                        
                     </tr>   
                     
         </table>
