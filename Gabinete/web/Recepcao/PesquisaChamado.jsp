@@ -61,7 +61,7 @@
                         <td>     </td>
                         <td>     </td>
                         <td>
-                            <a href="">Encaminhar</a>;                            
+                            <a href="EncaminhaChamado.jsp">Encaminhar</a>;                            
                         </td>
                     </tr>   
                     
