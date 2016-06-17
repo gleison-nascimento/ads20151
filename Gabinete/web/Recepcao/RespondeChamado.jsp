@@ -8,18 +8,18 @@
     <body>
         <div>
              <form action="RespondeChamado">
-                 <label for="nome">Nome do Servidor: </label><br>
-                 <input type="text" name="nome" id="nome" size="30" required><br><br>
-                 <label for="mail">E-Mail do Servidor: </label><br>
-                 <input type="text" name="email" id="email" size="30" required><br><br>
-                 <label for="fone">Telefone do Servidor: </label><br>
-                 <input type="text" name="telefone" id="telefone" size="10" ><br><br>
-                 <label for="descr">Descrição da Resposta: </label><br>
+                 <label>Nome do Servidor:</label>
+                 <label for="nome"><b>Nome</b></label><br><br>
+                 <label>E-Mail do Servidor:</label>
+                 <label for="email"><b>E-mail</b></label><br><br>
+                 <label>Telefone do Servidor:</label>
+                 <label for="telefone"><b>Telefone</b></label><br><br>
+                 <label>Descrição da Resposta:</label><br>
                  <textarea name="descricao" id="descricao" rows="5" cols="51" required></textarea><br>
                  <input type="submit" value="Salvar Resposta"><br><br>
-                 <label for="inicio">Data da Resposta: </label><br>
+                 <label for="inicio">Data da Resposta:</label>
                  <select>
-                    <option value="">Dia</option>
+                    <option>Dia</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
                     <option value="03">03</option>
@@ -53,7 +53,7 @@
                     <option value="31">31</option>
                  </select>
                  <select>
-                    <option value="">Mês</option>
+                    <option>Mês</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
                     <option value="03">03</option>
@@ -68,7 +68,7 @@
                     <option value="12">12</option>
                  </select>
                  <select>
-                    <option value="">Ano</option>
+                    <option>Ano</option>
                     <option value="2000">2000</option>
                     <option value="2001">2001</option>
                     <option value="2002">2002</option>
@@ -87,8 +87,8 @@
                     <option value="2015">2015</option>
                     <option value="2016">2016</option>
                  </select><br><br>
-                 <label for="inicio">Nenhum arquivo selecionado</label><br>
-                  <input type="submit" value="Anexar Documento"><br><br>
+                 <label for="inicio"><b>Nenhum arquivo selecionado</b></label><br>
+                 <input type="submit" value="Anexar Documento"><br><br><br>
                  <input type="reset" value="Limpar">
                  <input type="submit" value="Responder Chamado">
              </form>
