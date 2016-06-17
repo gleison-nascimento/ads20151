@@ -4,6 +4,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Responder Chamado</title>
+        <style>
+            textarea { 
+                resize: none; 
+            }
+        </style>
     </head>
     <body>
         <div>
@@ -14,9 +19,6 @@
                  <label for="email"><b>E-mail</b></label><br><br>
                  <label>Telefone do Servidor:</label>
                  <label for="telefone"><b>Telefone</b></label><br><br>
-                 <label>Descrição da Resposta:</label><br>
-                 <textarea name="descricao" id="descricao" rows="5" cols="51" required></textarea><br>
-                 <input type="submit" value="Salvar Resposta"><br><br>
                  <label for="inicio">Data da Resposta:</label>
                  <select>
                     <option>Dia</option>
@@ -87,6 +89,9 @@
                     <option value="2015">2015</option>
                     <option value="2016">2016</option>
                  </select><br><br>
+                 <label>Descrição da Resposta:</label><br>
+                 <textarea name="descricao" id="descricao" rows="8" cols="80" required></textarea><br>
+                 <input type="submit" value="Salvar Resposta"><br><br>
                  <label for="inicio"><b>Nenhum arquivo selecionado</b></label><br>
                  <input type="submit" value="Anexar Documento"><br><br><br>
                  <input type="reset" value="Limpar">
