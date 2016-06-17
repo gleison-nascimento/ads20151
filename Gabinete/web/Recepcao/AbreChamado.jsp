@@ -6,10 +6,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<%@include file="../cabecalho.html"%>
+<%@include file="../cabecalho.html"%> 
+<%@include file="../menu.html"%>
 
 <div id="conteudo">
     <div id="DivAbreChamado">
+        <h1>Abertura de chamados</h1>
+        <hr size="2">
         <form action="CadastraChamado">
             <label for="nome">Nome: </label><br>
             <input type="text" name="nome" id="nome" size="50" required><br> <%-- value="<%= p.getNome() %>" --%>
@@ -41,5 +44,4 @@
     </div>
 </div>
         
-<%@include file="menu.html"%>
-<%@include file="rodape.html"%>        
+<%@include file="../rodape.html"%>        

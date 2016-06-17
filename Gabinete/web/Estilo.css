@@ -169,11 +169,13 @@ h1
 
 #DivAbreChamado
 {
-    width:200px;
-    height:200px;
-    position:absolute;
-    top:50%;
-    left:50%;
+    width:410px;
+    height:400px;
+    padding-left: 20px;
+    background-color: white;
+    position:relative;
+    top:15%;
+    left:33%;
     margin-top:-50px;
     margin-left:-50px;
 }
