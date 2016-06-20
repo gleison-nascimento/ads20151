@@ -81,7 +81,7 @@ public class UsuarioControl extends HttpServlet {
             usu.setSenha(request.getParameter("senha"), request.getParameter("confsenha"));
             usu.setSituacao(request.getParameter("situacao"));
             
-            usu.adicionar();
+//            usu.adicionar();
             
             RequestDispatcher dispatcher = 
                 request.getRequestDispatcher("index.html");
