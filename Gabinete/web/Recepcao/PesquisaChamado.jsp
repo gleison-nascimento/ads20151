@@ -174,6 +174,7 @@
             
                 <label for="responsavel">Usuario Responsavel: </label><br>
                 <select name="responsavel" id="responsavel" required>
+                   <option value=" "></option>   
                    <option value=" ">Usuario teste</option>     
                    <option value=" ">Usuario teste</option>      
                    <option value=" ">Usuario teste</option>      
