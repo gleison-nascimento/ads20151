@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.ifrs.controle;
 
 import br.edu.ifrs.modelo.bean.Perfil;
 import br.edu.ifrs.modelo.dao.PerfilDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,10 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author DTI
+/** 
+ * Document   : PerfilControl.java
+ * Created on : 21/06/2016, 17:30 (Revisão | EvertonQuadros)
+ * Author     : Gleison/Projeto
+ * Escopo     : Usuario/Projeto
+ * Descricao  : Arquivo de controle da classe Perfil
+ * Observações: Alterar conforme necessidade.
  */
+
 @WebServlet(name = "PerfilControl", urlPatterns = {"/PerfilControl"})
 public class PerfilControl extends HttpServlet {
 
@@ -38,12 +37,20 @@ public class PerfilControl extends HttpServlet {
             
             String op = request.getParameter("op");
             
-            if (op.equals("CONSULTA") || op.equals("CONSATUALIZAR")) consultar(request, response, op);
-            else if(op.equals("INSERIR")) inserir(request, response);
-            else if(op.equals("EXCLUIR")) excluir(request, response);
-            else if(op.equals("ATUALIZAR")) atualizar(request, response);
+            if (op.equals("CONSULTA") || op.equals("CONSATUALIZAR")){ 
+                consultar(request, response, op);
+            }
+            else if(op.equals("INSERIR")){
+                inserir(request, response);
+            }
+            else if(op.equals("EXCLUIR")){
+                excluir(request, response);
+            }
+            else if(op.equals("ATUALIZAR")){
+                atualizar(request, response);
+            }
             
-        } catch (Exception e) {
+        } catch (ServletException | IOException e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
                     request.getRequestDispatcher("cadastros/erro.jsp");
@@ -106,14 +113,14 @@ public class PerfilControl extends HttpServlet {
     protected void consultar(HttpServletRequest request, HttpServletResponse response, String op)
             throws ServletException, IOException {
         try {           
-            String pagina = "";
+            String pagina;
             if (op.equals("CONSULTA")) {
-                Perfil[] perfis = null;
+                Perfil[] perfis;
                 perfis = PerfilDAO.consultar(request.getParameter("nome"));
                 pagina = "cadastros/consultaPerfil.jsp";
                 request.setAttribute("perfis", perfis);
             } else { 
-                Perfil perfil = null;
+                Perfil perfil;
                 perfil = PerfilDAO.consultar(Integer.parseInt(request.getParameter("id")));
                 pagina = "cadastros/formPerfil.jsp";
                 request.getSession().setAttribute("perfil", perfil);
@@ -168,7 +175,10 @@ public class PerfilControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        request.setAttribute("msg_erro", "Esses dados não devem ser processados com método GET.");
+        RequestDispatcher dispatcher = 
+            request.getRequestDispatcher("erro.jsp");
+        dispatcher.forward(request, response);
     }
 
     /**

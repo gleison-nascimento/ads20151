@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.ifrs.controle;
 
 import br.edu.ifrs.modelo.bean.Perfil;
 import br.edu.ifrs.modelo.bean.Usuario;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,10 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author DTI
+/** 
+ * Document   : UsuarioControl.java
+ * Created on : 21/06/2016, 17:27:07 (Revisão | EvertonQuadros)
+ * Author     : Gleison/Projeto
+ * Escopo     : Usuario/Projeto
+ * Descricao  : Arquivo de controle da classe Usuário
+ * Observações: Alterar conforme necessidade.
  */
+
 @WebServlet(name = "UsuarioControl", urlPatterns = {"/UsuarioControl"})
 public class UsuarioControl extends HttpServlet {
 
