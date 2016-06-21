@@ -177,7 +177,7 @@ public class PerfilControl extends HttpServlet {
             throws ServletException, IOException {
         request.setAttribute("msg_erro", "Esses dados não devem ser processados com método GET.");
         RequestDispatcher dispatcher = 
-            request.getRequestDispatcher("erro.jsp");
+            request.getRequestDispatcher("cadastros/erro.jsp");
         dispatcher.forward(request, response);
     }
 
