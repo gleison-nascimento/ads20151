@@ -1,9 +1,18 @@
-drop database gabinete;
-create database gabinete;
+/** 
+ * Document   : GabineteVirtual.sql
+ * Created on : 21/06/2016 16:43 (última revisão | EvertonQuadros)
+ * Author     : Gleison/Projeto
+ * Escopo     : Projeto
+ * Descrição  : Sql para criação do banco e tabelas.
+ * Observações: Não alterar. Comentar revisões.
+*/
+
+drop database if exists gabinete;
+create database if not exists gabinete;
 
 use gabinete;
 
-drop table setores;
+#drop table setores;
 create table setores (
     id int not null,
     nome varchar(200),
@@ -11,7 +20,7 @@ create table setores (
     primary key (id)
 );
 
-drop table usuarios;
+#drop table usuarios;
 create table usuarios (
     cpf varchar(11) not null,
     nome varchar(200) not null,
@@ -26,7 +35,7 @@ create table usuarios (
     foreign key (id_setor) references setores(id)
 );
 
-drop table chamados;
+#drop table chamados;
 create table chamados
 (
   id int not null auto_increment,
@@ -45,7 +54,7 @@ create table chamados
   foreign key (cpf_servidor) references usuarios(cpf)
 );
 
-drop table respostas;
+#drop table respostas;
 create table respostas
 (
   id_chamado int not null,
@@ -59,7 +68,7 @@ create table respostas
   foreign key (cpf_servidor) references usuarios(cpf)
 );
 
-drop table solicitacao_documentos;
+#drop table solicitacao_documentos;
 create table solicitacao_documentos
 (
   id_solicitacao int not null auto_increment,
@@ -74,7 +83,7 @@ create table solicitacao_documentos
   foreign key (cpf_servidor) references usuarios(cpf)
 );
 
-drop table documentos_oficiais;
+#drop table documentos_oficiais;
 create table documentos_oficiais
 (
   numero int not null,
@@ -88,7 +97,7 @@ create table documentos_oficiais
   foreign key (cpf_emissor) references usuarios(cpf)
 );
 
-drop table solicitacao_eventos;
+#drop table solicitacao_eventos;
 create table solicitacao_eventos
 (
   id_solicitacao int not null auto_increment,
@@ -105,7 +114,7 @@ create table solicitacao_eventos
   primary key (id_solicitacao)
 );
 
-drop table eventos;
+#drop table eventos;
 create table eventos
 (
   id_evento int not null auto_increment,
@@ -126,7 +135,7 @@ create table eventos
   foreign key (cpf_servidor) references usuarios(cpf)
 );
 
-drop table espacos;
+#drop table espacos;
 create table espacos
 (
   numero int not null,
@@ -142,7 +151,7 @@ create table espacos
   primary key (numero)
 );
 
-drop table solicitacao_reserva;
+#drop table solicitacao_reserva;
 create table solicitacao_reserva
 (
   id_solicitacao int not null auto_increment,
@@ -158,7 +167,7 @@ create table solicitacao_reserva
   primary key (id_solicitacao)
 );
 
-drop table reservas;
+#drop table reservas;
 create table reservas
 (
   id_reserva int not null auto_increment,
