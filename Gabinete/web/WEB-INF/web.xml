@@ -8,6 +8,10 @@
         <servlet-name>UsuarioControl</servlet-name>
         <servlet-class>br.edu.ifrs.controle.UsuarioControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginControl</servlet-name>
+        <servlet-class>br.edu.ifrs.controle.LoginControl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>PerfilControl</servlet-name>
         <url-pattern>/PerfilControl</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>UsuarioControl</servlet-name>
         <url-pattern>/UsuarioControl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginControl</servlet-name>
+        <url-pattern>/LoginControl</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
