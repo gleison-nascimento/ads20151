@@ -8,10 +8,16 @@ package br.edu.ifrs.util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-/**
- *
- * @author DTI
+/** 
+ * Document   : Conexao.java
+ * Created on : 21/06/2016, 17:43 (Revisão | EvertonQuadros)
+ * Author     : Gleison/Projeto
+ * Escopo     : Projeto
+ * Descricao  : Classe estática útil que implementa uma conexão.
+ * Observações: Alterar com aviso prévio, comentar revisões.
+ *              Não Comitar se houver alterações no login ou senha do banco.
  */
+
 public class Conexao {
     
     public static Connection abrirConexao() throws Exception {
