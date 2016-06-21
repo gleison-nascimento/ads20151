@@ -26,7 +26,7 @@
     </head>
     <body>
         
-        <h3>ERRO <%= p.getLogin()%> NAO TEM PERMISSÃO DE ACESSO!</h3>
-        
+        <h3>ERRO <%= p.getLogin()%> NAO TEM PERMISSÃO DE ACESSO!</h3><br>
+        <a href="eventos/EventoLogin.jsp">Voltar</a>
     </body>
 </html>

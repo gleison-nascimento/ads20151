@@ -18,6 +18,6 @@
         <h1>Ops...</h1>
         <hr>
         <p><%= request.getAttribute("msg_erro")%></p>
-        <a href="EventoLogin.jsp">Voltar</a>
+        <a href="eventos/EventoLogin.jsp">Voltar</a>
     </body>
 </html>

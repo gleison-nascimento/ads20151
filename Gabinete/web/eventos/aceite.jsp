@@ -25,6 +25,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>USUÁRIO <%= p.getLogin() %> LOGADO COM SUCESSO!</h1>
+        <h1>USUÁRIO <%= p.getLogin() %> LOGADO COM SUCESSO!</h1><br>
+        <a href="eventos/EventoLogin.jsp">Voltar</a>
     </body>
 </html>
