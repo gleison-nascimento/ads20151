@@ -59,7 +59,7 @@
                     <option value="12">12</option>
                  </select>
                
-                 <select>
+                 <select>                    
                     <option>Dia</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
@@ -129,7 +129,7 @@
                     <option value="10">10</option>
                     <option value="11">11</option>
                     <option value="12">12</option>
-                 </select>
+                 </select>                 
                  <select>
                     <option>Dia</option>
                     <option value="01">01</option>
@@ -163,7 +163,7 @@
                     <option value="29">29</option>
                     <option value="30">30</option>
                     <option value="31">31</option>
-                 </select><br>
+                 </select><br>                 
             
                <label for="situacao">Situacao: </label><br>
                <select name="situacao" id="situacao" required>
