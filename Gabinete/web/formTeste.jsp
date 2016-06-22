@@ -1,6 +1,6 @@
 <%-- 
     Document   : formTeste.jsp
-    Created on : 21/06/2016, 09:33:20 (Revisão | EvertonQuadros)
+    Created on : 22/06/2016, 09:25:20 (Revisão | EvertonQuadros)
     Author     : Morgana/Natália
     Escopo     : Projeto/Designer
     Descricao  : Tela JSP de teste para novas funcionalidades e formulários
@@ -16,7 +16,7 @@
     <html>
         <body>
             <h1>INSIRA SEU FORMULÁRIO AQUI</h1>
-            <br><a href="eventos\EventoLogin.jsp">Login</a>
+            <br><a href="eventos/EventoLogin.jsp">Login</a>
         </body>    
     </html>
 </div>
