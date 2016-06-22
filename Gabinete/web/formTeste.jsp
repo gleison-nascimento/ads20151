@@ -16,7 +16,7 @@
     <html>
         <body>
             <h1>INSIRA SEU FORMULÁRIO AQUI</h1>
-            <br><a href="eventos\EventoLogin.jsp">Login</a>
+            <br><a href="eventos/EventoLogin.jsp">Login</a>
         </body>    
     </html>
 </div>
