@@ -4,6 +4,7 @@
     Author     : MARCIO
 --%>
 
+<%@page import="br.edu.ifrs.modelo.bean.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,12 +17,20 @@
         
         <form action="EncaminhaChamado">
             
-            <label for="servidores">Servidores: </label><br>
-            <select name="servidor" id="servidor" required>
-               <option value=" ">Servidor teste</option>     
-               <option value=" ">Servidor teste</option>      
-               <option value=" ">Servidor teste</option>      
-            </select><br>   
+            <%
+                Usuario[] busca = (Usuario[])request.getAttribute("servidores");
+                
+                for (int i=0; i<busca.length; i++) {
+            %>   
+            
+                <label for="servidores">Servidores: </label><br>
+                <select name="servidor" id="servidor" required>
+                    <option value=" "><%= busca[i].getNome()%></option>                       
+                </select><br>   
+            
+            <%
+                }
+            %>
             
             <label for="descricao">Descrição do encaminhamento: </label><br>
             <textarea name="descricao" id="descricao" rows="5" cols="51" required></textarea><br>
