@@ -194,7 +194,12 @@
                    <th>Data de Abertura</th>
                    <th>Situação</th>                
                 </tr>
-            
+                <%
+                Recepcao[] busca = (Recepcao[])request.getAttribute("chamados");
+                
+                for (int i=0; i<busca.length; i++) {
+                %>   
+                
                     <tr>
                         <td>     </td>
                         <td>     </td>
@@ -207,7 +212,10 @@
                             <a href="RespondeChamado.jsp">Responder</a>                          
                         </td>
                         
-                    </tr>   
+                    </tr>  
+                <%
+                    }
+                %>
                     
             </table>
             
