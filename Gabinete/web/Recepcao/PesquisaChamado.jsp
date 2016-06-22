@@ -4,6 +4,7 @@
     Author     : MARCIO
 --%>
 
+<%@page import="br.edu.ifrs.modelo.bean.Recepcao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -201,10 +202,10 @@
                 %>   
                 
                     <tr>
-                        <td>     </td>
-                        <td>     </td>
-                        <td>     </td>
-                        <td>     </td>
+                        <td><%= busca[i].getId()%></td>
+                        <td><%= busca[i].getNome_solicitante()%></td>
+                        <td><%= busca[i].getData_abertura()%></td>
+                        <td><%= busca[i].getSituacao()%></td>
                         <td>
                             <a href="EncaminhaChamado.jsp">Encaminhar</a>                          
                         </td>
