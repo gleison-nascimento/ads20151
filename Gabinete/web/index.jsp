@@ -1,10 +1,18 @@
 <%-- 
-    Document   : formTeste.jsp
+    Document   : index.jsp
     Created on : 22/06/2016, 09:25:20 (Revisão | EvertonQuadros)
     Author     : Morgana/Natália
     Escopo     : Projeto/Designer
     Descricao  : Tela JSP de teste para novas funcionalidades e formulários
     Observações: Pode ser alterado e deletado.
+
+    Revisao     :  dia 23 de julho
+    Autor       :  Mathias Azzolini
+    Escopo      :  organizacao / refatoracao
+    Descricao   :  foi criado o arquivo index.jsp para tela inicial e corrigido 
+                   algum erros de sintaxe do html.
+
+
 --%>
 
 
@@ -13,12 +21,8 @@
 <%@include file="cabecalho.html"%> 
 
 <div id="conteudo">
-    <html>
-        <body>
-            <h1>INSIRA SEU FORMULÁRIO AQUI</h1>
-            <br><a href="eventos/EventoLogin.jsp">Login</a>
-        </body>    
-    </html>
+    <h1>Seja Bem vindo ao Gabinete Virtual</h1>
+    <br><a href="eventos/EventoLogin.jsp">Login</a> 
 </div>
 
 <%@include file="menu.html"%>

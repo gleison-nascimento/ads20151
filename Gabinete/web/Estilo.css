@@ -1,3 +1,14 @@
+// Modificação dia 23/06 por Mathias Azzolini
+//
+// Modificação 01   :   adicionado propriedade para formularioEventos
+// Comentário       :   adicionado css basico para o furmulario de eventos
+//                      modificacoes futuras sao permitidas.
+//
+// Modificação 02   :   adicionado o id Icons para posicionar corretamente
+//                      os iconeis do Menu.
+// comentario       :   modificacoes permitidas
+
+
 body
 {
     background-image:url(imagens/backgraund.jpg);
@@ -178,4 +189,42 @@ h1
     left:33%;
     margin-top:-50px;
     margin-left:-50px;
+}
+
+.formularioEventos {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.formularioEventos legend {
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.formularioEventos input, textarea{
+    border-color: #fff;
+    width: 70%;
+    border-radius: 5px;
+    height: 20px;
+}
+
+.formularioEventos textarea{
+    height: 20px;
+}
+
+.formularioEventos fieldset{
+    border-color: #333333;
+    border-radius: 5px;
+}
+
+#inputEventos{
+    width: 50%;
+}
+
+#icons{
+    position: absolute;
+    right:0;
+    bottom:0;
+    z-index:100;
 }
