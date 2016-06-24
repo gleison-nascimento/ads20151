@@ -7,6 +7,7 @@ package br.edu.ifrs.modelo.dao;
 
 import br.edu.ifrs.modelo.bean.Recepcao;
 import br.edu.ifrs.util.Conexao;
+import br.edu.ifrs.util.Util;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -150,7 +151,7 @@ public class RecepcaoDAO
                     p.setTelefone_contato(rs.getString("Telefone_contato"));
                     p.setDescricao_solicitacao(rs.getString("Descricao_solicitacao"));
                     p.setSituacao(rs.getString("Situacao"));
-                    p.setData_abertura(p.formataStringToCalendar(rs.getString("Data_abertura")));
+                    p.setData_abertura(Util.formataStringToCalendar(rs.getString("Data_abertura")));
                     p.setAnexos(rs.getString("Anexos"));
                     p.setCpf_recepcionista(rs.getString("Cpf_recepcionista"));
                     p.setCpf_servidor(rs.getString("Cpf_servidor"));
