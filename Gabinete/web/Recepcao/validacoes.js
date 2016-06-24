@@ -5,8 +5,10 @@
 function ValidaCampoVazio()
 {
     var nome = document.getElementById("nome");
-    var perfil = document.getElementById("Perfil");
+    var perfil = document.getElementById("perfil");
+    var date = document.getElementById("date");
     var email = document.getElementById("email");
+    var telefone = document.getElementById("telefone");
     var descricao = document.getElementById("descricao");
     var dataIni = document.getElementById("inicio");
     var dataFim = document.getElementById("fim");
@@ -17,6 +19,20 @@ function ValidaCampoVazio()
     {
         alert('O nome deve ser digitado!');
         nome.focus();
+        return false;        
+    }      
+    
+    if (date.value==='')
+    {
+        alert('A data deve ser informada!');
+        date.focus();
+        return false;        
+    }      
+    
+    if (telefone.value==='')
+    {
+        alert('O telefone deve ser digitado!');
+        telefone.focus();
         return false;        
     }      
     
