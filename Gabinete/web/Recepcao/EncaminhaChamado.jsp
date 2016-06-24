@@ -18,12 +18,12 @@
         <form action="EncaminhaChamado">
             
             <%
-                Usuario[] busca = (Usuario[])request.getAttribute("servidores");
+                Usuario[] busca = (Usuario[])request.getAttribute("servidor");
                 
                 for (int i=0; i<busca.length; i++) {
             %>   
             
-                <label for="servidores">Servidores: </label><br>
+                <label for="servidor">Servidores: </label><br>
                 <select name="servidor" id="servidor" required>
                     <option value=" "><%= busca[i].getNome()%></option>                       
                 </select><br>   
