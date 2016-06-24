@@ -5,7 +5,10 @@
  */
 package br.edu.ifrs.modelo.bean;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -128,8 +131,29 @@ public class Recepcao
         this.cpf_servidor = cpf_servidor;
     }
     
+    public static Calendar formataStringToCalendar(String data) throws Exception 
+    { 
+        SimpleDateFormat formatoData = new SimpleDateFormat("dd/mm/yyyy");
+        Calendar c = Calendar.getInstance();
+        if (data == null || data.equals(""))
+            return null;
+        try 
+        {
+            c.setTime(formatoData.parse(data));
+        } catch (ParseException e) {            
+            throw e;
+        }
+        return c;
+    }    
     
-    
-
-    
+    public static String formataCalendarToString(Calendar data) throws Exception 
+    { 
+        SimpleDateFormat formatoData = new SimpleDateFormat("yyyy-mm-dd");
+        Calendar c = new GregorianCalendar();
+        String retorno="";
+        if (data == null || data.equals(""))
+            return null;
+        retorno = formatoData.format(c.getTime());
+        return retorno;
+    }    
 }

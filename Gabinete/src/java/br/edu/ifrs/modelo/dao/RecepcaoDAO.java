@@ -150,7 +150,7 @@ public class RecepcaoDAO
                     p.setTelefone_contato(rs.getString("Telefone_contato"));
                     p.setDescricao_solicitacao(rs.getString("Descricao_solicitacao"));
                     p.setSituacao(rs.getString("Situacao"));
-                    p.setData_abertura(formataStringToCalendar(rs.getString("Data_abertura")));
+                    p.setData_abertura(p.formataStringToCalendar(rs.getString("Data_abertura")));
                     p.setAnexos(rs.getString("Anexos"));
                     p.setCpf_recepcionista(rs.getString("Cpf_recepcionista"));
                     p.setCpf_servidor(rs.getString("Cpf_servidor"));
@@ -195,29 +195,4 @@ public class RecepcaoDAO
         }
     }
       
-    public static Calendar formataStringToCalendar(String data) throws Exception 
-    { 
-        SimpleDateFormat formatoData = new SimpleDateFormat("dd/mm/yyyy");
-        Calendar c = Calendar.getInstance();
-        if (data == null || data.equals(""))
-            return null;
-        try 
-        {
-            c.setTime(formatoData.parse(data));
-        } catch (ParseException e) {            
-            throw e;
-        }
-        return c;
-    }    
-    
-    public static String formataCalendarToString(Calendar data) throws Exception 
-    { 
-        SimpleDateFormat formatoData = new SimpleDateFormat("yyyy-mm-dd");
-        Calendar c = new GregorianCalendar();
-        String retorno="";
-        if (data == null || data.equals(""))
-            return null;
-        retorno = formatoData.format(c.getTime());
-        return retorno;
-    }    
 }
