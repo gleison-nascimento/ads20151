@@ -9,11 +9,12 @@
 --%>
 
 <%@page import="br.edu.ifrs.modelo.bean.Login"%>
+
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        
+    <head>        
         <%
             Login p = new Login();
             if (request.getSession().getAttribute("login") != null) {
@@ -21,11 +22,20 @@
             }
         %>
         
+        <link href="../Estilo.css" rel="stylesheet" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Sucesso</title>
     </head>
     <body>
-        <h1>USUÁRIO <%= p.getLogin() %> LOGADO COM SUCESSO!</h1><br>
-        <a href="eventos/EventoLogin.jsp">Voltar</a>
+        <div id="CadastroComSucesso">
+            <center>
+                
+                <p>USUÁRIO <%= p.getLogin() %> LOGADO COM SUCESSO!</p><br>
+                   <a href="eventos/EventoLogin.jsp">Voltar</a>
+                   
+            </center>
+            
+        </div>
+        
     </body>
 </html>
