@@ -10,7 +10,7 @@
     <body>
         <h1>ERRO</h1>
         <hr>
-        <p><%= request.getAttribute("msg_erro")%></p>jkll
+        <p><%= request.getAttribute("msg_erro")%></p>
         <a href="javascript:history.back(1)">Voltar</a>
     </body>
 </html>
