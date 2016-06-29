@@ -14,7 +14,7 @@
 
 <div id="conteudo">
     <div class="formularioEventos">
-            <form action="#">
+        <form action="EventosControl" method="post">
                 <fieldset id="fieldSolicitante">
                     <legend>
                         Informações de Contato
