@@ -17,7 +17,7 @@
         
         <form action="EncaminhaChamado">
             
-            <input type="hidden" name="op" value="CONSEMCAMINHA">
+            <input type="hidden" name="op" value="CONSATUALIZAR">
             
             <%
                 Usuario[] busca = (Usuario[])request.getAttribute("servidor");
