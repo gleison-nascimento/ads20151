@@ -228,3 +228,12 @@ h1
     bottom:0;
     z-index:100;
 }
+#CadastroComSucesso{
+    width: 300px;
+    height: 200px;
+    background-color:#009933;
+    color: white;
+    border-radius: 10px;
+    opacity: 0.9;
+    position:absolute;
+}
