@@ -22,6 +22,12 @@
 
 <div id="conteudo">
     <h1>Seja Bem vindo ao Gabinete Virtual</h1>
+    <br><a href="eventos/aceite.jsp">Aceite</a> 
+    <br><a href="eventos/erro.jsp">erro</a> 
+    <br><a href="eventos/falhaLogin.jsp">Falha Login</a> 
+    <br><a href="eventos/formEventos.jsp">Login</a> 
+    
+    
     <br><a href="eventos/EventoLogin.jsp">Login</a> 
 </div>
 
