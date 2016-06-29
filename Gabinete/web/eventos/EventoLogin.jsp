@@ -3,21 +3,17 @@
     Created on : 21/06/2016, 16:28:07
     Author     : EvertonQuadros
     Escopo     : Eventos
-    Descricao  : Stand-Alone para testes do mÃ³dulo de evento, gera pequeno formulÃ¡rio para
-                 login de perfil e teste de sessÃµes:
+    Descricao  : Stand-Alone para testes do módulo de evento, gera pequeno formulário para
+                 login de perfil e teste de sessões:
                  administrador - admin123
                  user - user123
-    ObservaÃ§Ãµes: Alterar conforme necessidade.
+    Observações: Alterar conforme necessidade.
 --%>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<%@include file="../cabecalho.html"%> 
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Perfil Page</title>
-    </head>
-    <body>
+<div id="conteudo">
         <h1>Teste Login:</h1>
         <hr>
        
@@ -33,6 +29,7 @@
             <input type="reset" value="Limpar">
             
         </form>
-       
-    </body>
-</html>
+       </div>
+
+<%@include file="../menu.html"%>
+<%@include file="../rodape.html"%>
