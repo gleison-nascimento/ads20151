@@ -17,6 +17,8 @@
         
         <form action="EncaminhaChamado">
             
+            <input type="hidden" name="op" value="CONSEMCAMINHA">
+            
             <%
                 Usuario[] busca = (Usuario[])request.getAttribute("servidor");
                 
@@ -38,6 +40,7 @@
             <input type="submit" value="Encaminhar Chamado">
             
         </form>
+            
         
         
     </body>

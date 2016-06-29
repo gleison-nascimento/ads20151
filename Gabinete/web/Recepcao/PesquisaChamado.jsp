@@ -18,6 +18,8 @@
            <hr>
         
            <form action="PesquisaChamado">
+                
+                <input type="hidden" name="op" value="CONSULTA">
                         
                 <label for="nome">Nome: </label><br>
                 <input type="text" id="nome" name="nome" size="20"><br>
