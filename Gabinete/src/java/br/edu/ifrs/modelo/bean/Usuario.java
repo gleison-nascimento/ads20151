@@ -30,6 +30,22 @@ public class Usuario {
     private String situacao;
     private String observacoes;
 
+    public Usuario() {
+        this.cpf = "";
+        this.nome = "";
+        this.matricula = "";
+        this.sexo = "";
+        this.endereco = "";
+        this.email = ""; 
+        this.telefoneResidencial = ""; 
+        this.telefoneProfissional = "";
+        this.telefoneCelular = "";
+        this.perfil = new Perfil();
+        this.username = "";
+        this.senha = ""; 
+        this.situacao = "";
+        this.observacoes = "";
+    }
     /**
      * @return the cpf
      */
