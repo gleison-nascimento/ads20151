@@ -261,8 +261,6 @@ h1
     
 }
 
-
-
 #loginEnviar{
     left: 100px;
     font-size: 12pt;
@@ -286,4 +284,14 @@ h1
     border-radius: 5px;
     background-color:#666600;
     
+}
+
+#mensagemTela{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    color:white;
+    background-color:#a6d3a6;
+    border-radius: 10px;    
+    opacity: 0.9;
 }
