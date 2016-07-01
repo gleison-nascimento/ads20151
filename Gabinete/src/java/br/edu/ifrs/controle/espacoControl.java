@@ -1,6 +1,6 @@
 package br.edu.ifrs.controle;
 
-import br.edu.ifrs.modelo.espacoModelo;
+import br.edu.ifrs.modelo.bean.espacoModelo;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

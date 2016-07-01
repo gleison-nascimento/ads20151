@@ -1,4 +1,5 @@
- <%-- 
+<%@page import="br.edu.ifrs.util.Util"%>
+<%-- 
     Document   : ListarChamados
     Created on : Jun 16, 2016, 2:23:43 PM
     Author     : MARCIO
@@ -17,7 +18,7 @@
            <h1>Pesquisar Chamados</h1>
            <hr>
         
-           <form action="PesquisaChamado">
+           <form action="RecepcaoControl">
                 
                 <input type="hidden" name="op" value="CONSULTA">
                         
@@ -60,7 +61,7 @@
                    <th>Situação</th>                
                 </tr>
                 <%
-                Recepcao[] busca = (Recepcao[])request.getAttribute("chamados");
+                Recepcao[] busca = (Recepcao[])request.getAttribute("recepcao");
                 
                 for (int i=0; i<busca.length; i++) {
                 %>   
@@ -68,7 +69,7 @@
                     <tr>
                         <td><%= busca[i].getId()%></td>
                         <td><%= busca[i].getNome_solicitante()%></td>
-                        <td><%= busca[i].getData_abertura()%></td>
+                        <td><%= Util.formataCalendarToString(busca[i].getData_abertura())%></td>
                         <td><%= busca[i].getSituacao()%></td>
                         <td>
                             <a href="EncaminhaChamado.jsp">Encaminhar</a>                          

@@ -124,9 +124,9 @@ public class RecepcaoControl extends HttpServlet {
             String pagina = "";
             if (op.equals("CONSULTA")) 
             {
-                Recepcao recepcao = null;
-                recepcao = RecepcaoDAO.consultar(Integer.parseInt(request.getParameter("id")));
-                pagina = "PesquisaChamado.jsp";
+                Recepcao recepcao[] = null;
+                recepcao = RecepcaoDAO.consultar(request.getParameter("nome"));
+                pagina = "Recepcao/PesquisaChamado.jsp";
                 request.setAttribute("recepcao", recepcao);
             } 
 //            else { 
@@ -144,7 +144,7 @@ public class RecepcaoControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("erro.jsp");
+                    request.getRequestDispatcher("cadastros/erro.jsp");
             dispatcher.forward(request, response);
         }
         
@@ -172,5 +172,45 @@ public class RecepcaoControl extends HttpServlet {
         }
         
     }
+
+    
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
 
 }

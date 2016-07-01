@@ -41,7 +41,7 @@ public class RecepcaoDAO
                 data = s.format(c);
 
                 /* Preprar a sentença SQL */
-                pstmt = con.prepareStatement("insert into chamado(nome_solicitante,"
+                pstmt = con.prepareStatement("insert into chamados(nome_solicitante,"
                                                                + "perfil_solicitante,"
                                                                + "email_contato,"
                                                                + "telefone_contato,"
@@ -90,7 +90,7 @@ public class RecepcaoDAO
                 data = s.format(c);
 
                 /* Preprar a sentença SQL */
-                pstmt = con.prepareStatement("update chamado set " +
+                pstmt = con.prepareStatement("update chamados set " +
                                              "nome_solicitante = ? " +
                                              "Perfil_solicitante = ? " +
                                              "email_contato = ? " +
@@ -139,12 +139,12 @@ public class RecepcaoDAO
                 Calendar c = Calendar.getInstance();
 
                 /* Preprar a sentença SQL */
-                pstmt = con.prepareStatement("select * from perfil where id = ?");
+                pstmt = con.prepareStatement("select * from chamados where id = ?");
                 pstmt.setInt(1, id);
                 
                 /* Executar a sentença no banco de dados */
                 rs = pstmt.executeQuery();              
-                if (rs.next() == true) {
+                while (rs.next() == true) {
                     p.setNome_solicitante(rs.getString("nome_solicitante"));
                     p.setPerfil_solicitante(rs.getString("Perfil_solicitante"));
                     p.setEmail_contato(rs.getString("Email_contato"));
@@ -170,6 +170,57 @@ public class RecepcaoDAO
         return p;
     }
     
+    public static Recepcao[] consultar(String nome) throws Exception {
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        
+        List<Recepcao> lista = new ArrayList();
+        
+        try {
+            try {
+                con = Conexao.abrirConexao();
+                
+                /* Preprar a sentença SQL */
+                pstmt = con.prepareStatement("select * from chamados where nome_solicitante like ?");
+                pstmt.setString(1, (nome == null || nome.equals("") ? "%":"%"+nome+"%"));
+                
+                /* Executar a sentença no banco de dados */
+                rs = pstmt.executeQuery();              
+                while (rs.next() == true) {
+                    Recepcao p = new Recepcao();
+                    
+                    p.setNome_solicitante(rs.getString("nome_solicitante"));
+                    p.setPerfil_solicitante(rs.getString("Perfil_solicitante"));
+                    p.setEmail_contato(rs.getString("Email_contato"));
+                    p.setTelefone_contato(rs.getString("Telefone_contato"));
+                    p.setDescricao_solicitacao(rs.getString("Descricao_solicitacao"));
+                    p.setSituacao(rs.getString("Situacao"));
+                    Calendar c = Calendar.getInstance();
+                    c.setTimeInMillis(rs.getDate("Data_abertura").getTime());
+                    p.setData_abertura(c);
+                   // p.setData_abertura(Util.formataStringToCalendar(rs.getString("Data_abertura")));
+                    p.setAnexos(rs.getString("Anexos"));
+                    p.setCpf_recepcionista(rs.getString("Cpf_recepcionista"));
+                    p.setCpf_servidor(rs.getString("Cpf_servidor"));
+                    p.setId(rs.getInt("id"));
+                    
+                    lista.add(p);
+                }
+            } catch (Exception e) {
+                throw new Exception("Falha ao inserir o perfil no Banco de Dados.<br><!--" + e.getMessage() + "-->");
+            } finally {
+                pstmt.close();
+                con.close();
+            }
+        } catch (Exception ex) {
+            throw ex;
+        }
+        
+        return lista.toArray(new Recepcao[0]);
+    }
+    
+    
     public static void deletar(Recepcao p) throws Exception {
         Connection con = null;
         PreparedStatement pstmt = null;
@@ -180,7 +231,7 @@ public class RecepcaoDAO
                 con = Conexao.abrirConexao();
 
                 /* Preprar a sentença SQL */
-                pstmt = con.prepareStatement("delete from chamado where id = ?");
+                pstmt = con.prepareStatement("delete from chamados where id = ?");
                 pstmt.setInt(1, p.getId());
                 
                 /* Executar a sentença no banco de dados */
