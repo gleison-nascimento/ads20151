@@ -179,17 +179,34 @@ h1
     font-family:Narkisim,sans-serif;
 }
 
-#DivAbreChamado
+#DivRespondeChamado
 {
     width:410px;
-    height:400px;
+    height:410px;
     padding-left: 20px;
     background-color: white;
     position:relative;
-    top:15%;
+    top:19%;
     left:33%;
     margin-top:-50px;
     margin-left:-50px;
+}
+
+#DivAbreChamado
+{
+    width:410px;
+    height:370px;
+    padding-left: 20px;
+    background-color: white;
+    position:relative;
+    top:19%;
+    left:33%;
+    margin-top:-50px;
+    margin-left:-50px;
+}
+
+textarea { 
+    resize: none; 
 }
 
 .formularioEventos {
