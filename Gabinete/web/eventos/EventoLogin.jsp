@@ -13,22 +13,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <%@include file="../cabecalho.html"%> 
 
-<div id="conteudo">
-        <h1>Teste Login:</h1>
-        <hr>
-       
-        <form action="/Gabinete/LoginControl" method="POST" >
-           
-            <label for="login">login: </label><br>
-            <input type="text" name="login" id="login" size="100"><br>
-            <br>
-            <label for="senha">senha: </label><br>
-            <input type="password" name="senha" id="senha" size="50"><br>
-            <br>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
+    <div id="conteudo">
+        <div class='formLogin'>
+          <center>
+             <h1>Teste Login:</h1>                
+                <hr>       
+                    <form action="/Gabinete/LoginControl" method="POST" >           
+                 <label for="login">login: </label><br>
+                    <input type="text" name="login" id="login" size="80"><br>
+                <br>
+             <label for="senha">senha: </label><br>
+                    <input type="password" name="senha" id="senha" size="50"><br>
+                 <br>
+                 
+                 <input id="loginLimpar"  type="reset" value="Limpar">
+                 <input id ="loginEnviar" type="submit" value="Enviar">
+            
             
         </form>
+        
+    </center>
+        
+    </div>
+    
+       
        </div>
 
 <%@include file="../menu.html"%>
