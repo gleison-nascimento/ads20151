@@ -6,6 +6,12 @@
     Descricao  : Tela JSP de teste para quando o perfil selecionado tiver 
                  permissão de administrador do sistema.
     Observações: Pode ser alterado e deletado.
+
+  Revisao     :  dia 01 de Julho
+    Autor       : Morgana
+    Escopo      :  Layout
+    Descricao   :  Foi inserido nesta página os estilos padrão, no entanto não utilizamos os includes
+                   pois existem informações do HEAD desta página, assim chamamos diretamente o css.
 --%>
 
 <%@page import="br.edu.ifrs.modelo.bean.Login"%>
@@ -24,18 +30,23 @@
         
         <link href="../Estilo.css" rel="stylesheet" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Sucesso</title>
+        <title>Cadastro feito com Sucesso</title>
     </head>
     <body>
-        <div id="CadastroComSucesso">
-            <center>
+        
+    <center>
+        <div id="mensagemTela">     
                 
                 <p>USUÁRIO <%= p.getLogin() %> LOGADO COM SUCESSO!</p><br>
-                   <a href="eventos/EventoLogin.jsp">Voltar</a>
-                   
-            </center>
-            
+                   <a href="../eventos/EventoLogin.jsp">Voltar</a>
+          
         </div>
+        
+    </center>
+        
+        
+        
+        
         
     </body>
 </html>
