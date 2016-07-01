@@ -10,6 +10,7 @@
 
 <%@page import="br.edu.ifrs.modelo.bean.Login"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link href="../Estilo.css" rel="stylesheet" type="text/css"/>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,11 +23,18 @@
         %>
         
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Usuário Não Autenticado</title>
     </head>
     <body>
+        <div id="mensagemTela">
+            <center>
+                <br>
+            <img src="/Gabinete/imagens/proibido.png" alt="Erro"  title="Erro"  width="30" height="30px">   
+                <h3>ERRO <%= p.getLogin()%> Usuário não possui permissão de Acesso</h3><br>
+                 <a href="../eventos/EventoLogin.jsp">Voltar</a>     
+             </div>
+        </center>
         
-        <h3>ERRO <%= p.getLogin()%> NAO TEM PERMISSÃO DE ACESSO!</h3><br>
-        <a href="eventos/EventoLogin.jsp">Voltar</a>
+        
     </body>
 </html>
