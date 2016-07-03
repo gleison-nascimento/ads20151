@@ -9,12 +9,13 @@
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="validacoes.js" type="text/javascript"></script>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <%@include file="../cabecalho.html"%> 
 
 <div id="conteudo">
     <div class="formularioEventos">
-        <form action="EventosControl" method="post">
+        <form action="EventosControl" method="post" onsubmit="return validarFormulario();">
                 <fieldset id="fieldSolicitante">
                     <legend>
                         Informações de Contato
@@ -23,25 +24,25 @@
                         Solicitante:
                     </label>
                     <br>
-                    <input type="text" id="solicitante" value="solicitante">
+                    <input type="text" id="solicitante" placeholder="Digite seu nome..." required>
                     <br> 
                     <label for="entidade">
                         Entidade Solicitante
                     </label>
                     <br>
-                    <input type="text" id="entidade" value="entidade">
+                    <input type="text" id="entidade" placeholder="Digite o nome da sua entidade..." required>
                     <br> 
                     <label for="email">
                         E-mail:
                     </label>
                     <br>
-                    <input type="text" id="email" value="email">
+                    <input type="text" id="email" placeholder="Digite seu email para contato..." required>
                     <br> 
                     <label for="telefone">
                         Telefone de Contato:
                     </label>
                     <br>
-                    <input type="tel" id="telefone" value="telefone">
+                    <input type="tel" id="telefone" maxlength="15" placeholder="Ex: (51) 3333-3333" onkeypress="return mascaraTelefone(event,'telefone')" required>
                     <br>
                 </fieldset>
                 <br>
@@ -53,19 +54,13 @@
                         Início do Evento:
                     </label>
                        <br>
-                    <input type="DateTime-Local" id="dataInicial">
+                    <input type="DateTime-Local" id="dataInicial" onchange="verificaDataInicial();" required>
                     <br> 
                     <label for="dataFinal">
                         Fim do Evento:
                     </label>
                     <br> 
-                    <input type="DateTime-Local" id="dataFinal">
-                    <br> 
-                    <label for="data">
-                        Data da Solicitação:
-                    </label>
-                    <br> 
-                    <input type="date" id="data">
+                    <input type="DateTime-Local" id="dataFinal" onchange="verificaDataFinal();" required>
                     <br> 
                     <label for="situacao">
                         Situacao:
@@ -77,8 +72,7 @@
                         Descrição do Evento:
                     </label>
                     <br> 
-                    <textarea id="descricao">
-                    </textarea>
+                    <textarea id="descricao" required="true" required/></textarea>
                     <br>                    
                 </fieldset>
                 <br>                
