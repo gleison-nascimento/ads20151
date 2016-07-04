@@ -15,9 +15,8 @@
 --%>
 
 <%@page import="br.edu.ifrs.modelo.bean.Login"%>
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>        
@@ -38,8 +37,8 @@
         <div id="mensagemTela">     
                 
                 <p>USUÁRIO <%= p.getLogin() %> LOGADO COM SUCESSO!</p><br>
-                   <a href="../eventos/EventoLogin.jsp">Voltar</a>
-          
+                <c:redirect url="main.jsp"/>
+                  
         </div>
         
     </center>
