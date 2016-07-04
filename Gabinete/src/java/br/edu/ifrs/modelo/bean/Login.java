@@ -13,6 +13,7 @@ public class Login {
     
     private String login;
     private String senha;
+    private String cpf;
     private int id;
 
     public Login() {
@@ -67,6 +68,24 @@ public class Login {
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) throws Exception {
+        
+        if(cpf != null && !cpf.equals("")){
+        
+            this.cpf = cpf;
+        
+        }
+        else{
+        
+            throw new Exception("O campo cpf é de preenchimento obrigatório.");
+            
+        }
     }
     
 }
