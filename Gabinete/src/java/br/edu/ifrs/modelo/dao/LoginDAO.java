@@ -37,6 +37,7 @@ public class LoginDAO {
                     p.setId(rs.getInt("id"));
                     p.setLogin(rs.getString("login"));
                     p.setSenha(rs.getString("senha"));
+                    p.setCpf(rs.getString("cpf"));
                     
                 }
                 
