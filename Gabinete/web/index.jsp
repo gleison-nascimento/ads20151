@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : index.jsp
     Created on : 22/06/2016, 09:25:20 (Revisão | EvertonQuadros)
     Author     : Morgana/Natália
@@ -15,10 +15,17 @@
 
 --%>
 
-
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<%@include file="cabecalho.html"%> 
+<%@page session="true" %>
+<%
+
+    session.setAttribute("login", null);
+
+
+%>
+<link href="Estilo.css" rel="stylesheet" type="text/css"/>
+<%@include file="cabecalho.jsp"%> 
 
 <div id="conteudo">
     <h1>Seja Bem vindo ao Gabinete Virtual</h1>
