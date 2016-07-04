@@ -11,7 +11,7 @@
 --%>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<%@include file="../cabecalho.html"%> 
+<%@include file="../cabecalho.jsp"%> 
 
     <div id="conteudo">
         <div class='formLogin'>
