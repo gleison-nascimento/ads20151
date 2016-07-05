@@ -1,10 +1,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="../cabecalho.jsp"%> 
 
-<div id="conteudo">
-    <div class="formularioEventos">
-        <form action="EventosControl" method="post">
+        <%
+            //Usuario p = new Usuario();
+            if (request.getSession().getAttribute("login") != null) {
+                p = (Usuario)request.getSession().getAttribute("login");
+                
+                %>
+                
+                    <div id="conteudo">
+                <div class="formularioEventos">
+                    <form action="EventosControl" method="post">
                 <fieldset id="fieldSolicitante">
                     <legend>
                         Informações de Contato
@@ -77,6 +85,25 @@
             </form>
     </div>
 </div>
+                
+                <%
+                
+            }
+            else{
+
+            %>
+            
+            <c:redirect url="/eventos/falhaLogin.jsp"/>
+            
+            <%
+
+            }
+            
+            
+
+
+        %>
+
 
 <%@include file="../menu.html"%>
 <%@include file="../rodape.html"%>
