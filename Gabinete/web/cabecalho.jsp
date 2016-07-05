@@ -8,6 +8,7 @@
 
 --%>
 
+<%@page import="br.edu.ifrs.modelo.bean.Usuario"%>
 <%@page session="true" %>
 <%@page import="br.edu.ifrs.modelo.bean.Login"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -38,13 +39,13 @@
                     <tr>
                         <%
                             
-                        Login p = new Login();
+                        Usuario p = new Usuario();
       
                         if (session.getAttribute("login") == null){
                            
-                            if (request.getSession().getAttribute("login") != null && !request.getSession().getAttribute("login").equals("") && request.getSession().getAttribute("login") instanceof Login) {
+                            if (request.getSession().getAttribute("login") != null && !request.getSession().getAttribute("login").equals("") && request.getSession().getAttribute("login") instanceof Usuario) {
 
-                                p = (Login)request.getSession().getAttribute("login");
+                                p = (Usuario)request.getSession().getAttribute("login");
                                 session.setAttribute("login", p);
 
                                 %>
