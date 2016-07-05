@@ -1,7 +1,8 @@
 package br.edu.ifrs.controle;
 
-import br.edu.ifrs.modelo.bean.Login;
+import br.edu.ifrs.modelo.bean.Usuario;
 import br.edu.ifrs.modelo.dao.LoginDAO;
+import br.edu.ifrs.modelo.dao.UsuarioDAO;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "LoginControl", urlPatterns = {"/LoginControl"})
 public class LoginControl extends HttpServlet {
 
-    private Login login = null;
+    private Usuario usuario = null;
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -32,7 +33,7 @@ public class LoginControl extends HttpServlet {
             buscaLogin(request,response);
         
         } catch (Exception e) {
-            
+
             request.getSession().setAttribute("login", request.getParameter("login"));
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
@@ -46,14 +47,15 @@ public class LoginControl extends HttpServlet {
     protected void buscaLogin(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException,Exception {
 
-        login = LoginDAO.consultar(request.getParameter("login"), request.getParameter("senha"));
+        usuario = UsuarioDAO.consultar(request.getParameter("login"), request.getParameter("senha"));
 
-        if(login != null){
+        if(usuario != null){
 
-            request.getSession().setAttribute("login", login);
+            request.getSession().setAttribute("login", usuario);
 
-            if(login.getLogin().equalsIgnoreCase("administrador")){
-
+            //if(usuario.getUsername().equalsIgnoreCase("administrador")){
+            if(usuario.getTipo_usuario() >= -1){ //alterar aqui para verificar permissionamento de usuários no sistema, diferentes logins?
+                
                 RequestDispatcher dispatcher = 
                     request.getRequestDispatcher("eventos/aceite.jsp");
                 dispatcher.forward(request, response);
@@ -69,7 +71,7 @@ public class LoginControl extends HttpServlet {
 
         }
         else{
-
+            
             throw new Exception("Usuário " + request.getParameter("login") + " não encontrado!");
 
         }
