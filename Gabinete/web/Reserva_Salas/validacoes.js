@@ -1,4 +1,4 @@
-function validar() {
+function validarSolicitacao() {
     var sol = document.getElementById("solicitante");
     var email = document.getElementById("email");
     var tel = document.getElementById("tel");
@@ -39,6 +39,30 @@ function validar() {
     } else if (horat.value === '' || horat.value === null) {
         alert('O campo `Hora de término da reserva´ é de preenchimento obrigatório.');
         horat.focus();
+        return false;
+    }
+    
+    return true;
+}
+
+function validarConsulta() {
+    var sol = document.getElementById("solicitante");
+    var sit = document.getElementById("situacao");
+    
+    if((sol.value === '' || sol.value === null) && (sit.value === '' || sit.value === null)) {
+        alert('Preencha ao menos um campo para realizar a pesquisa.');
+        return false;
+    }
+    
+    return true;
+}
+
+function validarReserva() {
+    var espaco = document.getElementById("espaco");
+    
+    if(espaco.value === '' || espaco.value === null) {
+        alert('Campo `Espaço reservado´ é obrigatório.');
+        espaco.focus();
         return false;
     }
     
