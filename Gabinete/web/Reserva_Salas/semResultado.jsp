@@ -14,11 +14,13 @@
     </head>
     <body>
         <div id="conteudo">
-            <h1>Dados não encontrados:</h1>
-            <br><br>
-            <a href="formPesquisa.jsp">Pesquisar novamente</a>
-            <br>
-            <a href="index.html">Voltar ao inicio</a>
+            <center>
+                <h1>Dados não encontrados!</h1>
+                <br><br>
+                <a href="formPesquisa.jsp">Pesquisar novamente</a>
+                <br>
+                <a href="../index.jsp">Voltar ao inicio</a>
+            <center>
         </div>
     </body>
     <%@include file="../menu.html"%>
