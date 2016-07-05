@@ -1,7 +1,7 @@
 <%-- 
     Document   : index.jsp
     Created on : 22/06/2016, 09:25:20 (Revisão | EvertonQuadros)
-    Author     : Morgana/Natália
+    Author     : Morgana/Natalia
     Escopo     : Projeto/Designer
     Descricao  : Tela JSP de teste para novas funcionalidades e formulários
     Observações: Pode ser alterado e deletado.
@@ -21,8 +21,10 @@
 <%@include file="cabecalho.html"%> 
 
 <div id="conteudo">
-    <h1>Seja Bem vindo ao Gabinete Virtual</h1>
-    <br><a href="eventos/EventoLogin.jsp">Login</a> 
+    <center>
+        <h1>Seja Bem vindo ao Gabinete Virtual</h1>
+        <br><a href="eventos/EventoLogin.jsp">Login</a> 
+    </center>
 </div>
 
 <%@include file="menu.html"%>
