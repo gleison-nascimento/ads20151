@@ -37,7 +37,7 @@
         <div id="conteudo">     
                 
                 <p>USUÁRIO <%= p.getUsername() %> LOGADO COM SUCESSO!</p><br>
-                <a href="main.jsp">Voltar</a>
+               <a href="/Gabinete/main.jsp">Voltar</a>
               <%--  <c:redirect url="main.jsp"/> --%>
                   
         </div>
