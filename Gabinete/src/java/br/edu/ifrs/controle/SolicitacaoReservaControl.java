@@ -1,6 +1,6 @@
 package br.edu.ifrs.controle;
 
-import br.edu.ifrs.modelo.bean.espacoModelo;
+import br.edu.ifrs.modelo.bean.SolicitacaoReserva;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "espacoControl", urlPatterns = {"/espacoControl"})
-public class espacoControl extends HttpServlet {
+public class SolicitacaoReservaControl extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
@@ -24,7 +24,8 @@ public class espacoControl extends HttpServlet {
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        espacoModelo eM = new espacoModelo();
+        
+        SolicitacaoReserva eM = new SolicitacaoReserva();
         
         try {
             eM.setSolicitante(request.getParameter("solicitante"));
@@ -40,11 +41,13 @@ public class espacoControl extends HttpServlet {
             
             eM.adicionar();
                         
-            RequestDispatcher dispatcher = request.getRequestDispatcher("sucesso.html");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/sucesso.html");
             dispatcher.forward(request, response);
+            
         } catch (Exception e) {
+            
             request.setAttribute("msg_erro", e.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
             dispatcher.forward(request, response);
         }
     }

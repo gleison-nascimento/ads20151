@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class espacoModelo {
+public class SolicitacaoReserva {
     private String solicitante;
     private String entidade;
     private String email;
