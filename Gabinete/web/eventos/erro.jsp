@@ -26,7 +26,7 @@
             
         <hr>
         <p><%= request.getAttribute("msg_erro")%></p>
-        <a href="index.jsp">Voltar</a>
+        <a href="/Gabinete/main.jsp">Voltar</a>
             
         </div>
        
