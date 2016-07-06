@@ -45,7 +45,7 @@
                 %>
             
                 <h3>ERRO <%= p.getUsername() %> Usuário não possui permissão de Acesso</h3><br>
-                <a href="main.jsp">Voltar</a>
+                <a href="/Gabinete/main.jsp">Voltar</a>
             
                 <%   
             }
