@@ -26,7 +26,7 @@ public class Conexao {
         
         /* Conectar no banco de dados */
         Class.forName("com.mysql.jdbc.Driver");
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gabinete", "root", "root123");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gabinete", "root", "4n0ny2015");
         
         return con;
     }
