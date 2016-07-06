@@ -9,15 +9,15 @@
 <html>
     <%@include file="../cabecalho.html"%> 
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Pesquisa</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     </head>
     <body>
         <div id="conteudo">
             <center>
-                <h1>Pesquisar Espaços</h1>
+                <h1>Pesquisar</h1>
                 <hr>
                 <form action="espacoControle">    
+                    <input type="hidden" name="operacao" value="0">
 
                     <label for="numero" > Numero da sala:</label>
                     <br/>
@@ -45,9 +45,9 @@
 
                     <input type="submit" value="Pesquisar" name="pesquisar" />
 
-                </form> 
+                </form>  
             </center>
-        </div>    
+        </div>
     </body>
     <%@include file="../menu.html"%>
     <%@include file="../rodape.html"%>

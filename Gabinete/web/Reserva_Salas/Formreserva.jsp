@@ -10,8 +10,6 @@
     <%@include file="../cabecalho.html"%> 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <title>JSP Page</title>
         <link href="Estilos.css" rel="stylesheet" type="text/css"/>
         <script src="Validacoes.js" type="text/javascript"></script>
     </head>
@@ -19,8 +17,8 @@
         <div id="conteudo">
             <center>
                 <h1>Cadastro de Espaço</h1><br>
-
-                <div id="quadro">
+                <hr>
+                
                     <form action="ReservaControl" method="post" onsubmit="return ValidarEspaco()">
 
                         <label for="nome">Nome:</label><br>
@@ -65,7 +63,7 @@
                     <input type="submit" value="Enviar">
                     <input type="reset" value="Limpar">  
                 </form>        
-            </div>
+            
             </center>
         </div>
     </body> 

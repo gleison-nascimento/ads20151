@@ -68,3 +68,35 @@ function validarReserva() {
     
     return true;
 }
+
+function ValidarEspaco(){
+    var nome = document.getElementById('nome').value();
+    var numero = Integer.parseInt(document.getElementsById('numero').value());
+    var lotacao = document.getElementsById('lotacao').value();
+    var tipo_lab = document.getElementById('tipo_lab').value();
+    
+    if (nome.value === '') {
+        alert('O campo nome é de preenchimento obrigatório.');
+        nome.focus();
+        return false;
+    }
+    if(tipo_lab.value === ''){
+        alert('O campo escolha a sala deve ser preenchido');
+        return false;
+    }
+    if(lotacao === null){
+        alert('o campo lotação deve estar preenchido');
+        return false;   
+    }
+    if(numero.value <= 100 || numero.value >=700){
+        alert('o numero da sala deve ser maior que 100 e menor que 700');
+        return false;
+    }
+    if((numero % 100)>=30){
+        alert('A dezena não pode ser maior que 30');
+        return false;
+    }
+    
+        return true;
+}
+    

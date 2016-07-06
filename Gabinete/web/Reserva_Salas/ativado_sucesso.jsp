@@ -1,6 +1,6 @@
 <%-- 
-    Document   : semResultado
-    Created on : 24/06/2016, 10:04:49
+    Document   : ativado_sucesso
+    Created on : 05/07/2016, 09:14:43
     Author     : 10070155
 --%>
 
@@ -14,12 +14,9 @@
     <body>
         <div id="conteudo">
             <center>
-                <h1>Dados não encontrados!</h1>
-                <br><br>
-                <a href="formPesquisa.jsp">Pesquisar novamente</a>
-                <br>
-                <a href="../index.jsp">Voltar ao inicio</a>
-            <center>
+                <h1>O espaço foi ativado com sucesso.</h1>
+                <a href="index.html">Voltar ao inicio</a>
+            </center>
         </div>
     </body>
     <%@include file="../menu.html"%>

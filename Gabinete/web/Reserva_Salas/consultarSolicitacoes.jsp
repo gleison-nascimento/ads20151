@@ -5,7 +5,6 @@
     <%@include file="../cabecalho.html"%>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Lista de solicitações de espaço</title>
         <script src="validacoes.js" type="text/javascript"></script>
     </head>
     
@@ -15,7 +14,7 @@
                 <h1>Lista de solicitações</h1>
                 <hr>
 
-                <form action="espacoControl" onsubmit="return validarConsulta()">
+                <form action="SolicitacaoControl" onsubmit="return validarConsulta()">
                     <input type="hidden" name="op" value="CONSULTA">
 
                     <label for="solicitante">Solicitante: </label>
