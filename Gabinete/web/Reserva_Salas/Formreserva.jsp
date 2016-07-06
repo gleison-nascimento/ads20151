@@ -19,7 +19,7 @@
                 <h1>Cadastro de Espaço</h1><br>
                 <hr>
                 
-                    <form action="ReservaControl" method="post" onsubmit="return ValidarEspaco()">
+                    <form action="/Gabinete/ReservaControl" method="post" onsubmit="return ValidarEspaco()">
 
                         <label for="nome">Nome:</label><br>
                         <input type="text" name="nome" id="nome" size="30"><br><br>

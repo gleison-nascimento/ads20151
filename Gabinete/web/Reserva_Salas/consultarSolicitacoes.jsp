@@ -14,7 +14,7 @@
                 <h1>Lista de solicitações</h1>
                 <hr>
 
-                <form action="SolicitacaoControl" onsubmit="return validarConsulta()">
+                <form action="/Gabinete/SolicitacaoControl" onsubmit="return validarConsulta()">
                     <input type="hidden" name="op" value="CONSULTA">
 
                     <label for="solicitante">Solicitante: </label>

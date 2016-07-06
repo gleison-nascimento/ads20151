@@ -13,7 +13,8 @@
             <center>
                 <h1>Solicitar Espaço</h1>
                 <hr>
-                <form action="espacoControl" method="post" onsubmit="return validar()">
+                <form action="/Gabinete/SolicitacaoReservaControl" method="post" onsubmit="return validar()">
+                    
                     <label for="solicitante">Solicitante: </label><br>
                     <input type="text" name="solicitante" id="solicitante" size="30"><br><br>
 

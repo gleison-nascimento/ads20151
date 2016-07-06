@@ -16,7 +16,7 @@
             <center>
                 <h1>Pesquisar</h1>
                 <hr>
-                <form action="espacoControle">    
+                <form action="/Gabinete/espacoControle">    
                     <input type="hidden" name="operacao" value="0">
 
                     <label for="numero" > Numero da sala:</label>
