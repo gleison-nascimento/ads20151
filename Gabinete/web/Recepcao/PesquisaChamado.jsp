@@ -8,13 +8,12 @@
 <%@page import="br.edu.ifrs.modelo.bean.Recepcao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Gabinete</title>
-    </head>
-    <body>
-        <div>
+
+<%@include file="../cabecalho.html"%> 
+        
+    <div id="conteudo">  
+
+        <div  id="DivPesquisaChamado">
            <h1>Pesquisar Chamados</h1>
            <hr>
         
@@ -25,14 +24,15 @@
                 <label for="nome">Nome: </label><br>
                 <input type="text" id="nome" name="nome" size="20"><br>
                 
-                <label for="inicio">Data de abertura:</label>
-                <input type="date"><br><br>
+                <label for="inicio">Data de abertura:</label><br>
+                <input type="date"><br>
                 
-                <label for="fim">Data do encerramento:</label>
-                <input type="date"><br><br>                                           
+                <label for="fim">Data do encerramento:</label><br>
+                <input type="date"><br>                                           
             
                <label for="situacao">Situacao: </label><br>
                <select name="situacao" id="situacao" required>
+                   <option value="">    </option>
                    <option value="aberto">Aberto</option>
                    <option value="atendimento">Em Atendimento</option>
                    <option value="concluido">Concluido</option>
@@ -86,6 +86,10 @@
             </table>
             
         </div>
+                
+    </div>
+                
+<%@include file="../menu.html"%>
+<%@include file="../rodape.html"%>
         
-    </body>
-</html>
+  
