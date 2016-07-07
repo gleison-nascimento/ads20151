@@ -205,6 +205,19 @@ h1
     margin-left:-50px;
 }
 
+#DivPesquisaChamado
+{
+    width:530px;
+    height:auto;
+    padding-left: 20px;
+    background-color: white;
+    position:relative;
+    top:19%;
+    left:28%;
+    margin-top:-50px;
+    margin-left:-50px;
+}
+
 textarea { 
     resize: none; 
 }
