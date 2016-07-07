@@ -33,7 +33,7 @@ public class Util
     
     public static String formataCalendarToString(Calendar data) throws Exception 
     { 
-        SimpleDateFormat formatoData = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+        SimpleDateFormat formatoData = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         Calendar c = new GregorianCalendar();
         String retorno="";
         if (data == null || data.equals(""))

@@ -34,11 +34,6 @@ public class RecepcaoDAO
             try {
                 /* Conectar no banco de dados */
                 con = Conexao.abrirConexao();
-                SimpleDateFormat s = new SimpleDateFormat("yyyy-mm-dd");
-                Calendar c = Calendar.getInstance();
-                String data;
-                c = p.getData_abertura();
-                data = s.format(c);
 
                 /* Preprar a sentença SQL */
                 pstmt = con.prepareStatement("insert into chamados(nome_solicitante,"
@@ -46,21 +41,15 @@ public class RecepcaoDAO
                                                                + "email_contato,"
                                                                + "telefone_contato,"
                                                                + "descricao_solicitacao,"
-                                                               + "situacao,"
                                                                + "data_abertura,"
-                                                               + "anexos,"
-                                                               + "cpf_recepcionista,"
-                                                               + "cpf_servidor) values (?,?,?,?,?,?,?,?,?,?)");
+                                                               + "anexos) values (?,?,?,?,?,?,?)");
                 pstmt.setString(1, p.getNome_solicitante());
                 pstmt.setString(2, p.getPerfil_solicitante());
                 pstmt.setString(3, p.getEmail_contato());
                 pstmt.setString(4, p.getTelefone_contato());
                 pstmt.setString(5, p.getDescricao_solicitacao());
-                pstmt.setString(6, p.getSituacao());
-                pstmt.setString(7, data);
-                pstmt.setString(8, p.getAnexos());
-                pstmt.setString(9, p.getCpf_recepcionista());
-                pstmt.setString(10, p.getCpf_servidor());
+                pstmt.setString(6, Util.formataCalendarToString(p.getData_abertura()));
+                pstmt.setString(7, p.getAnexos());
 
                 /* Executar a sentença no banco de dados */
                 pstmt.execute();
@@ -73,6 +62,46 @@ public class RecepcaoDAO
         } catch (Exception ex) {
             throw ex;
         }
+    }
+    
+    public static String protocolo() throws Exception
+    {
+        String prot="";
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        Recepcao p = new Recepcao();
+        
+        try {
+            try {
+                con = Conexao.abrirConexao();
+                Calendar c = Calendar.getInstance();
+
+                /* Preprar a sentença SQL */
+                pstmt = con.prepareStatement("select id from chamados order by id");
+                
+                /* Executar a sentença no banco de dados */
+                rs = pstmt.executeQuery();
+                if (rs != null)
+                {
+                    while (rs.next() == true)
+                    {
+                        prot = Integer.toString(rs.getInt("id"));
+                    }
+                }
+                else
+                    prot = "1";
+            } catch (Exception e) {
+                throw new Exception("Falha ao buscar o protocolo no Banco de Dados.<br><!--" + e.getMessage() + "-->");
+            } finally {
+                pstmt.close();
+                con.close();
+            }
+        } catch (Exception ex) {
+            throw ex;
+        }
+        
+        return prot;       
     }
     
     public static void atualizar(Recepcao p) throws Exception {

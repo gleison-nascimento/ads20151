@@ -10,6 +10,10 @@ import br.edu.ifrs.modelo.dao.RecepcaoDAO;
 import br.edu.ifrs.util.Util;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.time.LocalDate.now;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -48,7 +52,7 @@ public class RecepcaoControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("erro.jsp");
+                    request.getRequestDispatcher("Recepcao/erro.jsp");
             dispatcher.forward(request, response);
         }
     }
@@ -56,35 +60,40 @@ public class RecepcaoControl extends HttpServlet {
     protected void inserir(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Recepcao p = new Recepcao();
+        Calendar calendar = new GregorianCalendar();
         
         try 
         {    
-            p.setAnexos(request.getParameter("anexos"));
-            p.setCpf_recepcionista(request.getParameter("cpf_recepcionista"));
-            p.setCpf_servidor(request.getParameter("cpf_servidor"));
-            p.setData_abertura(Util.formataStringToCalendar(request.getParameter("data_abertura")));
-            p.setDescricao_solicitacao(request.getParameter("descricao_solicitacao"));
-            p.setEmail_contato(request.getParameter("email_contato"));
-            p.setNome_solicitante(request.getParameter("nome_solicitante"));
-            p.setPerfil_solicitante(request.getParameter("perfil_solicitante"));
-            p.setSituacao(request.getParameter("situacao"));
-            p.setTelefone_contato(request.getParameter("telefone_contato"));
+            p.setAnexos(request.getParameter("documentos"));
+            p.setCpf_recepcionista("");//request.getParameter("cpf_recepcionista"));
+            p.setCpf_servidor("");//request.getParameter("cpf_servidor"));
+            p.setData_abertura(Calendar.getInstance());
+            p.setDescricao_solicitacao(request.getParameter("descricao"));
+            p.setEmail_contato(request.getParameter("email"));
+            p.setNome_solicitante(request.getParameter("nome"));
+            p.setPerfil_solicitante(request.getParameter("Perfil"));
+            p.setSituacao("");
+            p.setTelefone_contato(request.getParameter("telefone"));
 
             RecepcaoDAO.adicionar(p);
 
-            //RequestDispatcher dispatcher = 
-              //      request.getRequestDispatcher("index.html");
-            //dispatcher.forward(request, response);
-            consultar(request, response, "CONSULTA");
+            request.setAttribute("Protocolo",retornaProtocolo());
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Recepcao/RetornaProtocolo.jsp");
+            dispatcher.forward(request, response);
+            // consultar(request, response, "CONSULTA");
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
-            RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Recepcao/erro.jsp");
             dispatcher.forward(request, response);
         }
         
     }
-
+    
+    protected String retornaProtocolo() throws ServletException, IOException, Exception
+    {
+        return RecepcaoDAO.protocolo();
+    }
+    
     protected void atualizar(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Recepcao p = new Recepcao();
@@ -112,7 +121,7 @@ public class RecepcaoControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("erro.jsp");
+                    request.getRequestDispatcher("Recepcao/erro.jsp");
             dispatcher.forward(request, response);
         }
         
@@ -144,7 +153,7 @@ public class RecepcaoControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("cadastros/erro.jsp");
+                    request.getRequestDispatcher("Recepcao/erro.jsp");
             dispatcher.forward(request, response);
         }
         
@@ -167,7 +176,7 @@ public class RecepcaoControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("erro.jsp");
+                    request.getRequestDispatcher("Recepcao/erro.jsp");
             dispatcher.forward(request, response);
         }
         
