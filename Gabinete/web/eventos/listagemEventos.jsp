@@ -8,13 +8,22 @@
 --%>
 
 
+<%@page import="br.edu.ifrs.modelo.bean.Usuario"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="br.edu.ifrs.modelo.bean.Evento"%>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <%@include file="../cabecalho.html"%> 
 
 <div id="conteudo">
+    
+    <%
+            Usuario p = new Usuario();
+            if (request.getSession().getAttribute("login") != null) {
+                p = (Usuario)request.getSession().getAttribute("login");        
+    %>
+    
     <center><h3> Lista de Solicitação de Eventos:</h3></center>
     <center><table>
             <tr>
@@ -46,6 +55,22 @@
                 }
             %>
     </table></center>
+    
+    <%   
+            }
+            else{
+            %>
+            
+            <c:redirect url="/eventos/falhaLogin.jsp"/>
+            
+            <%
+
+            }
+            
+            
+
+
+        %>
 </div>
 
 <%@include file="../menu.html"%>
