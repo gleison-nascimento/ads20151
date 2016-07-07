@@ -43,19 +43,21 @@
         <%
             if(p.getUsername() != null && !p.getUsername().equals("")){
                 %>
-            
+            <center>
+                <img src="../imagens/wrong-access.png" alt=""/>
                 <h3>ERRO <%= p.getUsername() %> Usuário não possui permissão de Acesso</h3><br>
                 <a href="/Gabinete/main.jsp">Voltar</a>
-            
+            </center>
                 <%   
             }
             else{
             
                 %>
-                
+            <center>
+                <img src="../imagens/wrong-access.png" alt=""/>
                 <h3>ERRO Apenas usuários autenticados podem acessar essa área</h3><br>
                 <a href="../eventos/EventoLogin.jsp">Voltar</a>
-                
+            </center>    
                 <%
 
             }
