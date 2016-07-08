@@ -3,8 +3,11 @@
     Created on : 10/06/2016, 09:04:14
     Author     : Rodrigo
 --%>
+<%@page import="br.edu.ifrs.modelo.bean.Recepcao"%>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="validacoes.js" type="text/javascript"></script>
 <!DOCTYPE html>
+
 
 <%@include file="../cabecalho.html"%> 
 
@@ -12,7 +15,10 @@
     <div id="DivAbreChamado">
         <h1>Abertura de chamados</h1>
         <hr size="2">
-        <form action="CadastraChamado">
+
+        <form action="/Gabinete/RecepcaoControl" method="post" onsubmit="return ValidaCampoVazio()"> 
+            <input type="hidden" name="op" value="INSERIR">            
+            
             <label for="nome">Nome: </label><br>
             <input type="text" name="nome" id="nome" size="50" required><br> <%-- value="<%= p.getNome() %>" --%>
 
