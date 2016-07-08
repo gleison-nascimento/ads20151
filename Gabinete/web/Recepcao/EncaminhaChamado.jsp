@@ -15,9 +15,9 @@
     <body>
         <h1>Encaminhar Chamados</h1>
         
-        <form action="EncaminhaChamado">
+        <form action="RecepcaoControl" method="post"  onsubmit="return ValidaCampoVazio()">
             
-            <input type="hidden" name="op" value="CONSATUALIZAR">
+            <input type="hidden" name="op" value="ATUALIZAR">
             
             <%
                 Usuario[] busca = (Usuario[])request.getAttribute("servidor");
