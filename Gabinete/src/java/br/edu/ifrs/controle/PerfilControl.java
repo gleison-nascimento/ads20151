@@ -78,7 +78,7 @@ public class PerfilControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("cadastros/erro.jsp");
+                    request.getRequestDispatcher("eventos/erro.jsp");
             dispatcher.forward(request, response);
         }
         
@@ -104,7 +104,7 @@ public class PerfilControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("cadastros/erro.jsp");
+                    request.getRequestDispatcher("eventos/erro.jsp");
             dispatcher.forward(request, response);
         }
         
@@ -134,7 +134,7 @@ public class PerfilControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("cadastros/erro.jsp");
+                    request.getRequestDispatcher("eventos/erro.jsp");
             dispatcher.forward(request, response);
         }
         
@@ -157,7 +157,7 @@ public class PerfilControl extends HttpServlet {
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
             RequestDispatcher dispatcher = 
-                    request.getRequestDispatcher("cadastros/erro.jsp");
+                    request.getRequestDispatcher("eventos/erro.jsp");
             dispatcher.forward(request, response);
         }
         
