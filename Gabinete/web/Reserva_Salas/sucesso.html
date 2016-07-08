@@ -1,13 +1,104 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <title>Gabinete Virtual</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/Gabinete/imagens/icon.png">
+        <link href="/Gabinete/Estilo.css" rel="stylesheet" type="text/css"/>
+        
     </head>
     
     <body>
-        <h1>SolicitaÃ§Ã£o cadastrada no sistema.</h1>
-        <hr>
-        <a href="javascript:history.back(1)">Voltar</a>
+        <div id="Banner">            
+            <div id="logo"> 
+                <img src="/Gabinete/imagens/logo.png" alt="logo"  title="Logo IFRS-Campus Restinga"  width="120" height="160px">
+            </div>   
+            <div id="titulo">              
+                <h1>Gabinete Virtual</h1>             
+            </div> 
+            <div id="icons">
+                <table  cellspacing="30">
+                    <tr>
+                        <td><a href="/Gabinete/eventos/EventoLogin.jsp"><img src="/Gabinete/imagens/loginIcon.png" alt="Login" title="Login" width="40" height="40px"></a> </td> 
+                        <td><a href="index.jsp"><img src="/Gabinete/imagens/home.png" alt="Inicio" title="Inicio" width="40" height="40px"></a> </td>     
+                        <td><a href="#"><img src="/Gabinete/imagens/meusDados.png" alt="Meus Dados" title="Meus Dados" width="40" height="40px"></a> </td>
+                        <td><a href="#"><img src="/Gabinete/imagens/logout.png" alt="Sair" title="Sair" width="40" height="40px"></a> </td>                          
+                    </tr>                                           
+                </table>
+            </div>
+      	</div>
+        
+        <div id="conteudo">
+            <center>
+                <h1>Solicitação cadastrada no sistema.</h1>
+                <hr>
+                <a href="javascript:history.back(1)">Voltar</a>
+            </center>
+        </div>
+        
+        
+        
+        <div id="menu">
+            <ul id="menus">
+                <li>Cadastro
+                    <ul>
+                    <li><a href ="PerfilControl?op=CONSULTA"> Perfis </a></li>  
+                    <li><a href ="UsuarioControl?op=CONSULTA"> Usuários </a></li>
+                    <li><a href ="#"> Cadastro 3</a></li>   
+                    </ul>
+                </li>
+
+                <li>Recepção
+                    <ul>
+                        <li><a href ="/Gabinete/Recepcao/AbreChamado.jsp">Abrir Chamado</a></li>  
+                        <li><a href ="">Acompanhar Resposta</a></li>
+                        <li><a href ="RecepcaoControl?op=CONSULTA">Pesquisar Chamados</a></li>   
+                        <li><a href ="">Encaminhar Chamados</a></li>   
+                        <li><a href ="">Responder Chamados</a></li>   
+                        <li><a href ="">Salvar resposta dos Chamados</a></li>                                  
+                    </ul>                
+                </li>  
+
+                <li>Documentos
+                    <ul>
+                        <li><a href ="#"> Documentos 1</a></li>  
+                        <li><a href ="#"> Documentos 2</a></li>
+                        <li><a href ="#"> Documentos 3</a></li>   
+                    </ul>                 
+                </li>
+
+                <li>Agendamento
+                    <ul>
+                        <li><a href ="/Gabinete/eventos/formEventos.jsp"> Agendmento de Eventos</a></li>  
+                    </ul>   
+                </li>
+
+                <li>Reservas
+                    <ul>
+                        <li><a href ="/Gabinete/Reserva_Salas/Formreserva.jsp">Cadastrar Espaço</a></li>  
+                        <li><a href ="/Gabinete/Reserva_Salas/formPesquisa.jsp">Pesquisar Espaços</a></li>
+                        <li><a href ="/Gabinete/Reserva_Salas/formSolicitacaoEspaco.jsp">Solicitar Espaço</a></li> 
+                        <!--<li><a href="../src/java/br/edu/ifrs/controle/SolicitacaoControl.java">Pesquisar Solicitação de Espaços</a></li>-->
+                        
+                        <li><a href ="/Gabinete/Reserva_Salas/consultarSolicitacoes.jsp">Pesquisar Solicitação de Espaços</a></li>
+                    </ul>   
+                </li>
+            </ul>            
+        </div>
+        
+        
+        
+        <div id="rodape">
+            <div id="inf">
+                <p>Página Criada por:</p>
+                <p>3º Semestre de Análise e Desenvolvimento de Sistemas </p>
+                <p> Instituto Federal do Rio Grande do Sul Campus Restinga 2016</p>                                        
+            </div>               
+        </div>
+        
+        
     </body>
 </html>

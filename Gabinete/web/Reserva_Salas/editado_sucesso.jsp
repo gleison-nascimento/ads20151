@@ -7,16 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <%@include file="../cabecalho.jsp"%>
-    
-    <%
-            //Usuario p = new Usuario();
-            if (request.getSession().getAttribute("login") != null) {
-                p = (Usuario)request.getSession().getAttribute("login");
-            }
-            
-    %>
-    
+    <%@include file="../cabecalho.html"%>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
@@ -24,7 +15,7 @@
         <div id="conteudo">
             <center>
                 <h1>O espaço foi editado com sucesso.</h1>
-                <a href="/Gabinete/main.jsp">Voltar ao inicio</a>
+                <a href="/Gabinete/index.jsp">Voltar ao inicio</a>
             </center>
         </div>
     </body>

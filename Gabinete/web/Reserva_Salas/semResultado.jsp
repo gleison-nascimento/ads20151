@@ -6,16 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
-    <%@include file="../cabecalho.jsp"%> 
-
-        <%
-            //Usuario p = new Usuario();
-            if (request.getSession().getAttribute("login") != null && request.getSession().getAttribute("login") instanceof Usuario) {
-                p = (Usuario)request.getSession().getAttribute("login");        
-        %>
-    <html>
-        <head>
+<html>
+    <%@include file="../cabecalho.html"%> 
+    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
@@ -25,25 +18,10 @@
                 <br><br>
                 <a href="formPesquisa.jsp">Pesquisar novamente</a>
                 <br>
-                <a href="../main.jsp">Voltar ao inicio</a>
-            <center>
+                <a href="../index.jsp">Voltar ao inicio</a>
+            </center>
         </div>
     </body>
-</html>
-<%   
-            }
-            else{
-            %>
-            
-            <c:redirect url="/eventos/falhaLogin.jsp"/>
-            
-            <%
-
-            }
-            
-            
-
-
-        %>
     <%@include file="../menu.html"%>
     <%@include file="../rodape.html"%>
+</html>

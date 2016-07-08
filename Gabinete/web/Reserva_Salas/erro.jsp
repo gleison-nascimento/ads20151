@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-        <%@include file="../cabecalho.jsp"%>
+        <%@include file="../cabecalho.html"%>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
                 <h1>ERRO</h1>
                 <hr>
                 <p><%= request.getAttribute("msg_erro")%></p>
-                <a href="/Gabinete/index.jsp">Voltar</a>
+                <a href="/Gabinete/index.jsp">Voltar ao Inicio</a>
             </center>
         </div>
     </body>
