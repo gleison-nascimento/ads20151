@@ -19,7 +19,7 @@
 <div id="conteudo">
     
     <%
-            if (request.getSession().getAttribute("login") != null) {
+            if (request.getSession().getAttribute("login") != null && request.getSession().getAttribute("login") instanceof Usuario) {
                 p = (Usuario)request.getSession().getAttribute("login");        
     %>
     
