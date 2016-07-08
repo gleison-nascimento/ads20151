@@ -130,7 +130,7 @@ public class ReservaEspaco {
             try{
 
                 /* Preprar a sentença SQL */
-                pstmt = con.prepareStatement("insert into espacos values(?,?,?,?,?,?,?,?,?,?,?)");
+                pstmt = con.prepareStatement("insert into espacos (numero,nome,descricao,lotacao,tipo,projetor,internet,quadro,especialidade,equipamentos,situacao) values(?,?,?,?,?,?,?,?,?,?,?)");
                 pstmt.setInt(1, this.numero);
                 pstmt.setString(2, this.nome);
                 pstmt.setString(3, this.descricao); 
