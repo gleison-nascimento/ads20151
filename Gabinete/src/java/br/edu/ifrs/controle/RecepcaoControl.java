@@ -78,7 +78,7 @@ public class RecepcaoControl extends HttpServlet {
             RecepcaoDAO.adicionar(p);
 
             request.setAttribute("Protocolo",retornaProtocolo());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("Recepcao/RetornaProtocolo.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/RetornaProtocolo.jsp");
             dispatcher.forward(request, response);
             // consultar(request, response, "CONSULTA");
         } catch (Exception e) {
