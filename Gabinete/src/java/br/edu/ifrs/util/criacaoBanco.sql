@@ -8,6 +8,9 @@
  * Created: 05/07/2016
  */
 
+--EvertonQuadros
+--aviso a execução desse script impede que o módulo de login funcione corretamente, provavelmente o projeto inteiro.
+
 create database trabalho_gabinete
 
 drop table espacos;
