@@ -6,26 +6,43 @@
     Descricao  : Tela JSP de teste para quando o perfil selecionado tiver 
                  permissão de administrador do sistema.
     Observações: Pode ser alterado e deletado.
+
+  Revisao     :  dia 01 de Julho
+    Autor       : Morgana
+    Escopo      :  Layout
+    Descricao   :  Foi inserido nesta página os estilos padrão, no entanto não utilizamos os includes
+                   pois existem informações do HEAD desta página, assim chamamos diretamente o css.
 --%>
 
-<%@page import="br.edu.ifrs.modelo.bean.Login"%>
+<%@page import="br.edu.ifrs.modelo.bean.Usuario"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html>
-    <head>
-        
+<%@include file="../cabecalho.jsp"%> 
+           
         <%
-            Login p = new Login();
+            //Usuario p = new Usuario();
             if (request.getSession().getAttribute("login") != null) {
-                p = (Login)request.getSession().getAttribute("login");
+                p = (Usuario)request.getSession().getAttribute("login");
             }
+            
         %>
         
+        <link href="../Estilo.css" rel="stylesheet" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>USUÁRIO <%= p.getLogin() %> LOGADO COM SUCESSO!</h1><br>
-        <a href="eventos/EventoLogin.jsp">Voltar</a>
-    </body>
-</html>
+     
+ 
+ 
+        <div id="conteudo">     
+                
+                <p>USUÁRIO <%= p.getUsername() %> LOGADO COM SUCESSO!</p><br>
+               <a href="/Gabinete/main.jsp">Voltar</a>
+              <%--  <c:redirect url="main.jsp"/> --%>
+                  
+        </div>
+        
+
+
+<%@include file="../menu.html"%>
+<%@include file="../rodape.html"%>
