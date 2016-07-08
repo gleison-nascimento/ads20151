@@ -1,6 +1,6 @@
 /** 
  * Document   : GabineteVirtual.sql
- * Created on : 21/06/2016 16:43 (última revisão | EvertonQuadros)
+ * Created on : 04/07/2016 21:13 (última revisão | EvertonQuadros)
  * Author     : Gleison/Projeto
  * Escopo     : Projeto
  * Descrição  : Sql para criação do banco e tabelas.
@@ -14,7 +14,7 @@ use gabinete;
 
 #drop table setores;
 create table setores (
-    id int not null,
+    id int not null auto_increment, --adicionado atributo auto_increment
     nome varchar(200),
     id_setor_pai int,
     primary key (id)
@@ -22,7 +22,9 @@ create table setores (
 
 #drop table usuarios;
 create table usuarios (
-    cpf varchar(11) not null,
+    login varchar(50) unique not null,  --adicionado
+    senha varchar(50) not null,         --adicionado 
+    cpf varchar(11) unique not null,    --adicionado atributo unique
     nome varchar(200) not null,
     telefone varchar(25),
     email varchar(255),
@@ -38,20 +40,20 @@ create table usuarios (
 #drop table chamados;
 create table chamados
 (
-  id int not null auto_increment,
-  nome_solicitante varchar(200),
-  perfil_solicitante varchar(20),
-  email_contato varchar(255),
-  telefone_contato varchar(25),
-  descricao_solicitacao text,
-  situacao varchar(15),
-  data_abertura datetime,
-  anexos varchar(255),
-  cpf_recepcionista varchar(11),
-  cpf_servidor varchar(11),
-  primary key (id),
-  foreign key (cpf_recepcionista) references usuarios(cpf),
-  foreign key (cpf_servidor) references usuarios(cpf)
+    id int not null auto_increment,
+    nome_solicitante varchar(200),
+    perfil_solicitante varchar(20),
+    email_contato varchar(255),
+    telefone_contato varchar(25),
+    descricao_solicitacao text,
+    situacao varchar(15),
+    data_abertura datetime,
+    anexos varchar(255),
+    cpf_recepcionista varchar(11),
+    cpf_servidor varchar(11),
+    primary key (id),
+    foreign key (cpf_recepcionista) references usuarios(cpf),
+    foreign key (cpf_servidor) references usuarios(cpf)
 );
 
 #drop table respostas;
