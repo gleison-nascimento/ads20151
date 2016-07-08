@@ -147,7 +147,7 @@ public class EventosControl extends HttpServlet {
             dispatcher.forward(request, response);
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("cadastros/erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
             dispatcher.forward(request, response);
         }
     }
@@ -164,7 +164,7 @@ public class EventosControl extends HttpServlet {
             
             if(eventos.isEmpty()){
                 request.setAttribute("msg_erro", "Nenhum resultado aparente");
-                RequestDispatcher dispatcher = request.getRequestDispatcher("cadastros/erro.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
                 dispatcher.forward(request, response);
             } else {
                 request.setAttribute("eventos", eventos);
@@ -173,7 +173,7 @@ public class EventosControl extends HttpServlet {
             }
         } catch (Exception e){
             request.setAttribute("msg_erro", e.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("cadastros/erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
             dispatcher.forward(request, response);
         }
     }
