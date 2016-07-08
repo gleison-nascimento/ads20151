@@ -19,7 +19,7 @@
         
     <div id="conteudo">  
 
-        <div  id="DivPesquisaChamado">
+        <div  id="DivPesquisaChamado" style="overflow-y:scroll;overflow-x:scroll;">
            <h1>Pesquisar Chamados</h1>
            <hr>
         
