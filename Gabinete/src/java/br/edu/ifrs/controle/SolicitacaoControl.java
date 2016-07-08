@@ -22,7 +22,7 @@ public class SolicitacaoControl extends HttpServlet {
             else if(op.equals("RESERVAR")) reservar(request, response);
         } catch (Exception ex) {
             request.setAttribute("msg_erro", ex.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
             dispatcher.forward(request, response);
         }
     }
@@ -46,7 +46,7 @@ public class SolicitacaoControl extends HttpServlet {
             dispatcher.forward(request, response);
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
             dispatcher.forward(request, response);
         }
     }
@@ -67,7 +67,7 @@ public class SolicitacaoControl extends HttpServlet {
             dispatcher.forward(request, response);
         } catch (Exception e) {
             request.setAttribute("msg_erro", "[EspacoControl.reservar]"+e.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
             dispatcher.forward(request, response);
         }
     }
