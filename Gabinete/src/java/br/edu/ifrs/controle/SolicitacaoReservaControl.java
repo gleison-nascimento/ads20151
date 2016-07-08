@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "espacoControl", urlPatterns = {"/espacoControl"})
+@WebServlet(name = "SolicitacaoReservaControl", urlPatterns = {"/SolicitacaoReservaControl"})
 public class SolicitacaoReservaControl extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -47,7 +47,7 @@ public class SolicitacaoReservaControl extends HttpServlet {
         } catch (Exception e) {
             
             request.setAttribute("msg_erro", e.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
             dispatcher.forward(request, response);
         }
     }

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "espacoControl", urlPatterns = {"/espacoControl"})
+@WebServlet(name = "SolicitacaoControl", urlPatterns = {"/SolicitacaoControl"})
 public class SolicitacaoControl extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -22,7 +22,7 @@ public class SolicitacaoControl extends HttpServlet {
             else if(op.equals("RESERVAR")) reservar(request, response);
         } catch (Exception ex) {
             request.setAttribute("msg_erro", ex.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
             dispatcher.forward(request, response);
         }
     }
@@ -33,12 +33,12 @@ public class SolicitacaoControl extends HttpServlet {
             if (op.equals("CONSULTA")) {
                 Solicitacoes[] s = null;
                 s = SolicitacaoDAO.consultar(request.getParameter("solicitante"), request.getParameter("situacao"));
-                pagina = "consultarSolicitacoes.jsp";
+                pagina = "Reserva_Salas/consultarSolicitacoes.jsp";
                 request.setAttribute("s", s);
             } else {
                 Solicitacoes s = null;
                 s = SolicitacaoDAO.consultar(Integer.parseInt(request.getParameter("id")));
-                pagina = "formReserva.jsp";
+                pagina = "Reserva_Salas/formReserva.jsp";
                 request.getSession().setAttribute("s", s);
             }
             
@@ -46,7 +46,7 @@ public class SolicitacaoControl extends HttpServlet {
             dispatcher.forward(request, response);
         } catch (Exception e) {
             request.setAttribute("msg_erro", e.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
             dispatcher.forward(request, response);
         }
     }
@@ -67,7 +67,7 @@ public class SolicitacaoControl extends HttpServlet {
             dispatcher.forward(request, response);
         } catch (Exception e) {
             request.setAttribute("msg_erro", "[EspacoControl.reservar]"+e.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
             dispatcher.forward(request, response);
         }
     }

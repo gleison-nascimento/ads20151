@@ -58,7 +58,7 @@ public class espacoControle extends HttpServlet {
                 }
             }catch(Exception X){
                 request.setAttribute("msg_erro", X.getMessage());
-                RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
                 dispatcher.forward(request, response);
             }
             
@@ -80,7 +80,7 @@ public class espacoControle extends HttpServlet {
                 }
             }catch(Exception X){
                 request.setAttribute("msg_erro", X.getMessage());
-                RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
                 dispatcher.forward(request, response);
             }
             
@@ -103,7 +103,7 @@ public class espacoControle extends HttpServlet {
             }catch(Exception X){
                 
                 request.setAttribute("msg_erro", X.getMessage());
-                RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
                 dispatcher.forward(request, response);
                 
             }
@@ -135,7 +135,7 @@ public class espacoControle extends HttpServlet {
             }catch(Exception X){
                 
                 request.setAttribute("msg_erro", X.getMessage());
-                RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
                 dispatcher.forward(request, response);
                 
             }
@@ -200,7 +200,7 @@ public class espacoControle extends HttpServlet {
                 }
             }catch(Exception e){
                 request.setAttribute("msg_erro", e.getMessage());
-                RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
                 dispatcher.forward(request, response);
             }  
         }
