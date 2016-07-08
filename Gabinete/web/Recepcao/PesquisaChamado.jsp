@@ -23,7 +23,7 @@
            <h1>Pesquisar Chamados</h1>
            <hr>
         
-           <form action="RecepcaoControl">
+           <form action="RecepcaoControl" method="post"  onsubmit="return ValidaCampoVazio()">
                 
                 <input type="hidden" name="op" value="CONSULTA">
                         
@@ -78,7 +78,7 @@
                         <td><%= Util.formataCalendarToString(busca[i].getData_abertura())%></td>
                         <td><%= busca[i].getSituacao()%></td>
                         <td>
-                            <a href="EncaminhaChamado.jsp">Encaminhar</a>                          
+                            <a href="RecepcaoControl?op=ATUALIZAR&id=<%= busca[i].getId()%>">Encaminhar</a>                          
                         </td>
                         <td>
                             <a href="RespondeChamado.jsp">Responder</a>                          
