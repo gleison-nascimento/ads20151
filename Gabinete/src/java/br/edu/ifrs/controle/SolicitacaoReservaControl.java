@@ -47,7 +47,7 @@ public class SolicitacaoReservaControl extends HttpServlet {
         } catch (Exception e) {
             
             request.setAttribute("msg_erro", e.getMessage());
-            RequestDispatcher dispatcher = request.getRequestDispatcher("Reserva_Salas/erro.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("eventos/erro.jsp");
             dispatcher.forward(request, response);
         }
     }
