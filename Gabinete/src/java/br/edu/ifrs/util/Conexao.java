@@ -7,6 +7,7 @@ package br.edu.ifrs.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 /** 
  * Document   : Conexao.java
@@ -28,6 +29,18 @@ public class Conexao {
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gabinete", "root", "connect");
         
         return con;
+    }
+    
+      public static void finalizarConexao(Connection con, PreparedStatement pstmt) throws Exception {
+        
+        if(pstmt != null){
+        pstmt.close();
+        }
+        
+        if(con != null){
+        con.close();
+        }
+        
     }
     
 }
