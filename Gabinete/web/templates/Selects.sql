@@ -7,5 +7,8 @@
  */
 
 use gabinete;
-select * from perfis;
+
+select * from usuarios where login = "admin" and senha = "admin123";
+
+select * from setores;
 
