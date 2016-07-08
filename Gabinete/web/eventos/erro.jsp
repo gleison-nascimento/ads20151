@@ -12,12 +12,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Gabinete Virtual</title>
+        <title>Erro</title>
+        <link href="../Estilo.css" rel="stylesheet" type="text/css"/>
+        
     </head>
     <body>
-        <h1>Ops...</h1>
+        <div id="mensagemTela">
+            <center>
+                 <h1>Ocorreu um Erro!</h1>
+            <img src="/Gabinete/imagens/erro.png" alt="Erro"  title="Erro"  width="130" height="200px">   
+                
+            </center>
+            
         <hr>
         <p><%= request.getAttribute("msg_erro")%></p>
-        <a href="eventos/EventoLogin.jsp">Voltar</a>
+        <a href="/Gabinete/index.jsp">Voltar</a>
+            
+        </div>
+       
     </body>
 </html>
