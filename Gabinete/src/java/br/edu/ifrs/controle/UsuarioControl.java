@@ -41,7 +41,7 @@ public class UsuarioControl extends HttpServlet {
         
         try {
             usu.setCpf(request.getParameter("cpf"));
-            usu.setMatricula(request.getParameter("matricula"));
+            usu.setMatricula(Integer.parseInt(request.getParameter("matricula")));
             usu.setNome(request.getParameter("nome"));
             usu.setSexo(request.getParameter("sexo"));
             usu.setEndereco(request.getParameter("endereco"));
@@ -104,7 +104,7 @@ public class UsuarioControl extends HttpServlet {
         
         try {   
             usu.setCpf(request.getParameter("cpf"));
-            usu.setMatricula(request.getParameter("matricula"));
+            usu.setMatricula(Integer.parseInt(request.getParameter("matricula")));
             usu.setNome(request.getParameter("nome"));
             usu.setSexo(request.getParameter("sexo"));
             usu.setEndereco(request.getParameter("endereco"));
