@@ -5,47 +5,29 @@
  */
 package br.edu.ifrs.modelo.bean;
 
-import br.edu.ifrs.modelo.bean.Perfil;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-
 /**
  *
  * @author DTI
  */
 public class Usuario {
-    private String cpf;
-    private String nome;
-    private String matricula;
-    private String sexo;
-    private String endereco;
-    private String email; 
-    private String telefoneResidencial; 
-    private String telefoneProfissional;
-    private String telefoneCelular;
-    private Perfil perfil;
-    private String username;
-    private String senha; 
-    private String situacao;
-    private String observacoes;
 
-    public Usuario() {
-        this.cpf = "";
-        this.nome = "";
-        this.matricula = "";
-        this.sexo = "";
-        this.endereco = "";
-        this.email = ""; 
-        this.telefoneResidencial = ""; 
-        this.telefoneProfissional = "";
-        this.telefoneCelular = "";
-        this.perfil = new Perfil();
-        this.username = "";
-        this.senha = ""; 
-        this.situacao = "";
-        this.observacoes = "";
-    }
+    private String cpf = "";
+    private String nome = "";
+    private int matricula = -1;  //siape? alterado de string --> int
+    private String sexo = "";
+    private String endereco = "";
+    private String email = ""; 
+    private String telefoneResidencial = ""; 
+    private String telefoneProfissional = "";
+    private String telefoneCelular = "";
+    private Perfil perfil = new Perfil();
+    private int tipo_usuario = 0; //adicionado
+    private String username = "";
+    private String senha = ""; 
+    private String situacao = "";
+    private String observacoes = "";
+    private int setor_id = -1; //adicionado
+    
     /**
      * @return the cpf
      */
@@ -77,14 +59,14 @@ public class Usuario {
     /**
      * @return the matricula
      */
-    public String getMatricula() {
+    public int getMatricula() {
         return matricula;
     }
 
     /**
      * @param matricula the matricula to set
      */
-    public void setMatricula(String matricula) {
+    public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
 
@@ -252,4 +234,23 @@ public class Usuario {
     public void setObservacoes(String observacoes) {
         this.observacoes = observacoes;
     }
+
+    public int getTipo_usuario() {
+        return tipo_usuario;
+    }
+
+    public void setTipo_usuario(int tipo_usuario) {
+        this.tipo_usuario = tipo_usuario;
+    }
+
+    public int getSetor_id() {
+        return setor_id;
+    }
+
+    public void setSetor_id(int setor_id) {
+        this.setor_id = setor_id;
+    }
+    
+    
+    
 }
